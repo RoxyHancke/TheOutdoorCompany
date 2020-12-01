@@ -1,0 +1,17 @@
+<!--pages/home/home.wxml-->
+
+<view class="container">
+
+
+<view class="item">
+  <!-- <view class="card" wx:for="{{details}}" wx:for-item="de" wx:key="id" wx:for-index="dex"> -->
+  <view class="card">
+    <!-- <image src="" bindtap="toDetails">  </image>
+    <image class="avatar-round" src=""> </image>
+    <view class="bottom-item">
+    <view class="name"></view> -->
+    <text>Name</text>
+  </view>
+</view>
+
+</view>

@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+
+   <view wx:if="{{currentUser}}">
+      <text style="margin-top:100rpx">You are logged in {{currentUser.nickname}}!</text>
+   </view>
+
+
+<view wx:else>
+   <view class="header">
+      <text>Welcome to The Outdoor Lovers</text>
+   </view>
+   
+   <view style="margin-top:20rpx">
+      <text class="subheader">Expereince a unique getaway!</text>
+   </view>"
+   <button open-type="getUserInfo"  bindgetuserinfo="userInfoHandler">微信 Login</button>
+   <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+</view>
