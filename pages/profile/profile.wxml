@@ -1,3 +1,26 @@
-<!--pages/profile/profile.wxml-->
+<!--pages/userinfo/userinfo.wxml-->
+<view class="namebox">
+    <view>
+    <image class="avatar" src="{{items.profilePicture}}"></image>
+    </view>
 
-<text>hi this is my profile</text>
+    <view>
+     <text>I'm {{items.nickName}}</text>
+    </view>
+    <view>
+    {{items.interest1}} {{items.interest2}} {{items.interest3}}
+    </view> 
+    <view>
+      <button class="buttonPinkSmall" bindtap="editProfile">Edit Profile</button>
+    </view>
+</view>
+
+<view style="padding: 30rpx"> 
+<view>
+  
+<view style=" border-style: solid; border-color: black;">
+<text>My bio:</text>
+{{items.shortBio}}
+</view>
+</view>
+</view>

@@ -28,12 +28,12 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
+    "enableEngineNative": false,
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
@@ -48,6 +48,14 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
     "plugin": {
       "list": []
     },
@@ -60,6 +68,14 @@
     "miniprogram": {
       "list": [
         {
+          "id": -1,
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
           "name": "pages/login/login",
           "pathName": "pages/login/login",
           "query": "",
@@ -74,6 +90,11 @@
         {
           "name": "pages/index/index",
           "pathName": "pages/index/index",
+
+          "id": -1,
+          "name": "pages/editProfile/editProfile",
+          "pathName": "pages/editProfile/editProfile",
+
           "scene": null
         }
       ]
