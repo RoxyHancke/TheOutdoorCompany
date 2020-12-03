@@ -12,7 +12,7 @@
    
    <view style="margin-top:20rpx">
       <text class="subheader">Expereince a unique getaway!</text>
-   </view>"
-   <button open-type="getUserInfo"  bindgetuserinfo="userInfoHandler">微信 Login</button>
+   </view>
+   <button type="primary" open-type="getUserInfo"  bindgetuserinfo="userInfoHandler">微信 Login</button>
    <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
 </view>
