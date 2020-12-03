@@ -50,6 +50,9 @@ onLoad: function () {
   },
 
 toTripDetails: function (e) {
+  wx.navigateTo({
+    url: '/pages/details/details',
+  })
   console.log("go to detail page",e);
 },
 toNavigate: function () {
