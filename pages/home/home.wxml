@@ -1,17 +1,46 @@
-<!--pages/home/home.wxml-->
 
+<image src="/pages/home/nature3.jpg"  style="width:100%"> </image>
 <view class="container">
 
+<view class="drop-down-card">
+  <view>Trip Type</view>
+  <view>Month</view>
 
-<view class="item">
-  <!-- <view class="card" wx:for="{{details}}" wx:for-item="de" wx:key="id" wx:for-index="dex"> -->
-  <view class="card">
-    <!-- <image src="" bindtap="toDetails">  </image>
-    <image class="avatar-round" src=""> </image>
-    <view class="bottom-item">
-    <view class="name"></view> -->
-    <text>Name</text>
   </view>
-</view>
+   
+
+  <view class="big-card" bindtap="toTripDetails"> > 
+  <view class="item" wx:for="{{details}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
+  
+
+  
+    {{de.title}}
+    {{de.tripType}}
+    {{de.tripStartDate}}
+    {{de.tripDes}}
+
+
+
 
 </view>
+
+
+
+</view>
+
+
+
+
+</view>
+
+
+
+<view class="buttons">
+ <button class="share-btn"> Share</button>
+  <button class="register-btn"> Register</button>
+</view>
+
+
+
+
+

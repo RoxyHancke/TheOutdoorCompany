@@ -1,1 +1,39 @@
 /* pages/home/home.wxss */
+
+
+
+
+.buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.share-btn {
+  color: white;
+  padding: 5rpx 5rpx;
+  border-radius: 5rpx;
+  font-weight: bold;
+  background: #8ECAE6;
+  transition:  0.3s ease;
+  width: 340rpx;
+  margin: 0 auto;
+}
+.item{
+  border: solid;
+}
+
+.register-btn {
+  color: white;
+  padding: 5rpx 5rpx;
+  border-radius: 5rpx;
+  font-weight: bold;
+  background: #FB8500;
+  transition:  0.3s ease;
+  width: 340rpx;
+  margin: 0 auto;
+}
+
+
+
+
+  

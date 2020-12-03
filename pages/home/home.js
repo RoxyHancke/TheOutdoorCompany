@@ -3,29 +3,43 @@ const app = getApp();
 Page({
 
   data: {
-    details: [{
+    userInfo:[{
       id:"",
       image:"",
+  },
+  ],
+    details:[{
+       id:"", 
+       t_title:"",
+       t_des:"",
+       t_start:"",
+       t_end:"",
+       t_detail:"",
+       t_cost:"",
+       t_type:"",
+       t_picture:[]
     }],
-
-    userinfos: [{
+    comments:[{comment:""}],
+    scrollInto: "",
+    inputVal: "",
+    usergetInfo: [{
       id:"",
-      display_name:"",
-    }]
+      image:'',
 
+    }],
+    options_id:"",
   },
 
 
 onLoad: function () {
-  const Details = new wx.BaaS.TableObject("");
-  const UserInfos = new wx.BaaS.TableObject("");
+  const Details = new wx.BaaS.TableObject("TOC_trip");
+  // const UserInfos = new wx.BaaS.TableObject("TOC_userInfo");
 
-  Details.expand(['userID']).find().then((res) => {
-    console.log("detail page result", res);
+  Details.find().then((res) => {
     this.setData({
-      stories:res.data.objects,
+      details:res.data.objects,
     });
-  
+    console.log("detail page result", res);
 
   }, (error) => {
     console.log("error", error);
@@ -35,12 +49,12 @@ onLoad: function () {
 
   },
 
-toDetails: function (e) {
-  console.log("go to profile page",e);
+toTripDetails: function (e) {
+  console.log("go to detail page",e);
 },
 toNavigate: function () {
   wx.switchTab({
-    url: 'pages/userinfo/userinfo',
+    url: 'pages/details/details',
   })
   },
 
@@ -50,6 +64,8 @@ toStories: function (e) {
     url: `/pages/details/details?id=${e.currentTarget.id}`,
   });
 },
+
+
 
 
 })
