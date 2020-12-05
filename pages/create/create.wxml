@@ -1,2 +1,9 @@
 <!--pages/create/create.wxml-->
-<text>pages/create/create.wxml</text>
+<view>
+  <view wx:if="{{!userInfo.id}}">
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">log in to edit profile</button>
+  </view>
+  <view wx:else> 
+ <text>edit your trip here!</text>
+  </view>
+</view>

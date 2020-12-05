@@ -5,6 +5,7 @@ Page({
   data: {
     userInfo:[],
   },
+  
   userInfoHandler: function(data) {
     console.log(data)
     wx.BaaS.auth.loginWithWechat(data).then(user => {

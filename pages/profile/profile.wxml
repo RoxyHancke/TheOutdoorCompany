@@ -1,26 +1,32 @@
 <!--pages/userinfo/userinfo.wxml-->
-<view class="namebox">
-    <view>
-    <image class="avatar" src="{{items.profilePicture}}"></image>
-    </view>
-
-    <view>
-     <text>I'm {{items.nickName}}</text>
-    </view>
-    <view>
-    {{items.interest1}} {{items.interest2}} {{items.interest3}}
-    </view> 
-    <view>
-      <button class="buttonPinkSmall" bindtap="editProfile">Edit Profile</button>
-    </view>
-</view>
-
-<view style="padding: 30rpx"> 
+ 
 <view>
-  
-<view style=" border-style: solid; border-color: black;">
-<text>My bio:</text>
-{{items.shortBio}}
-</view>
-</view>
+  <!-- go to log in page if there is no userinfo -->
+  <view wx:if="{{!userInfo.id}}">
+     <button type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">log in to edit profile</button>
+  </view>
+  <view wx:else>
+<!-- personal info box -->
+    <view class="namebox">
+      <view>
+      <image class="avatar" src="{{items.profilePicture}}"></image>
+      </view>
+
+      <view>
+      <text>I'm {{items.nickName}}</text>
+      </view>
+      <view>
+      {{items.interest1}} {{items.interest2}} {{items.interest3}}
+      </view> 
+      <view>
+        <button class="buttonPinkSmall" bindtap="editProfile">Edit Profile</button>
+      </view>
+    </view>
+
+<!-- short bio box -->
+    <view style=" border-style: solid; border-color: black;">
+      <text>My bio:</text>
+      {{items.shortBio}}
+    </view>
+  </view>
 </view>
