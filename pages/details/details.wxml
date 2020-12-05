@@ -39,7 +39,7 @@
                     <image class="avatar" src="{{image}}"></image>
                     <text>{{name}}</text>
                     <view>TRIP DESCRIPTON
-                    <textarea  calss="" name="" id="" cols="30" rows="10">{{activity.tripDes}}</textarea>
+                    <text>{{activity.tripDes}}</text>
                     </view>
                 </view>
                 <textarea class="article">{{activity.tripDetail}}</textarea>

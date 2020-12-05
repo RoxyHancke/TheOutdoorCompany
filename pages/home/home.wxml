@@ -6,7 +6,7 @@
               <view>Trip Type</view>
               <view>Month</view>
         </view>
-   
+
 
     <view class="big-card" > > 
           <view bindtap="toTripDetails" class="item" wx:for="{{details}}" id="{{de.id}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
