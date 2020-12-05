@@ -1,5 +1,6 @@
 /* pages/home/home.wxss */
 
+
 .drop-down-card {
   justify-content: center;
   display: flex;

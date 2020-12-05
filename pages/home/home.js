@@ -39,11 +39,20 @@ onLoad: function () {
 
   },
 
+toTripDetails: function(e){
+  console.log("HALALUYA",e.currentTarget.id )
+  
+    wx.navigateTo({
+      // details?tripOwner=fii23fi09r29038r3r290,
+      url: `/pages/details/details?tripId=${e.currentTarget.id}`,
+    });
+    
 toTripDetails: function (e) {
   wx.navigateTo({
     url: `/pages/details/details?tripid=${e.currentTarget.id}`,
   })
   console.log("go to detail page",e);
+
 },
 toNavigate: function () {
   wx.switchTab({
@@ -51,6 +60,8 @@ toNavigate: function () {
   })
   },
 
+
+},
 
 
 

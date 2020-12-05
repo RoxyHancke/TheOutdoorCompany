@@ -1,6 +1,7 @@
 
 <image src="https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg" style="width:100%"> </image>
 <view class="container">
+
    <view class="drop-down-card" style="border-width: thin; box-shadow: 0 0 15rpx rgba(0,0,0,0.2)">
       <view class="trip" style="border-right: solid; border-width: thin; " >Trip Type</view>
       <view class="month" >Month</view>
@@ -25,6 +26,7 @@
       <button class="register-btn"> Register</button>
    </view> -->
 </view>
+
 
 
 

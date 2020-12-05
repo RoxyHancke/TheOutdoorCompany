@@ -88,8 +88,13 @@
           "scene": null
         },
         {
+
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+
           "name": "pages/home/home",
           "pathName": "pages/home/home",
+
           "scene": null
         }
       ]
