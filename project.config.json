@@ -48,12 +48,6 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -86,9 +80,15 @@
           "scene": null
         },
         {
+          "id": -1,
           "name": "pages/editProfile/editProfile",
           "pathName": "pages/editProfile/editProfile",
-          "id": -1,
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
           "scene": null
         }
       ]

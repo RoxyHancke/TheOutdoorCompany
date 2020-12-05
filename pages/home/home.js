@@ -8,17 +8,7 @@ Page({
       image:"",
   },
   ],
-    details:[{
-       id:"", 
-       t_title:"",
-       t_des:"",
-       t_start:"",
-       t_end:"",
-       t_detail:"",
-       t_cost:"",
-       t_type:"",
-       t_picture:[]
-    }],
+    details:[],
     comments:[{comment:""}],
     scrollInto: "",
     inputVal: "",
@@ -49,11 +39,14 @@ onLoad: function () {
 
   },
 
-toTripDetails: function (e) {
-  wx.navigateTo({
-    url: '/pages/details/details',
-  })
-  console.log("go to detail page",e);
+toTripDetails: function(e){
+  console.log("HALALUYA",e.currentTarget.id )
+  
+    wx.navigateTo({
+      // details?tripOwner=fii23fi09r29038r3r290,
+      url: `/pages/details/details?tripId=${e.currentTarget.id}`,
+    });
+    
 },
 toNavigate: function () {
   wx.switchTab({
@@ -63,9 +56,10 @@ toNavigate: function () {
 
 
 toStories: function (e) {
-  wx.navigateTo({
-    url: `/pages/details/details?id=${e.currentTarget.id}`,
-  });
+  console.log("ndkjnagf",e)
+  // wx.navigateTo({
+    // url: `/pages/details/details?id=${e.currentTarget.id}`,
+  // });
 },
 
 

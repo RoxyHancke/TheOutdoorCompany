@@ -179,3 +179,8 @@ checkbox, radio{
   width: 340rpx;
   margin: 0 auto;
 }
+.page_bottom {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80rpx;
+}

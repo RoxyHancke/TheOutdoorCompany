@@ -2,27 +2,21 @@
 <image src="/pages/home/nature3.jpg"  style="width:100%"> </image>
 <view class="container">
 
-<view class="drop-down-card">
-  <view>Trip Type</view>
-  <view>Month</view>
-
-  </view>
+        <view class="drop-down-card">
+              <view>Trip Type</view>
+              <view>Month</view>
+        </view>
    
 
-  <view class="big-card" bindtap="toTripDetails"> > 
-  <view class="item" wx:for="{{details}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
-  
-
-  
-    {{de.title}}
-    {{de.tripType}}
-    {{de.tripStartDate}}
-    {{de.tripDes}}
-
-
-
-
-</view>
+    <view class="big-card" > > 
+          <view bindtap="toTripDetails" class="item" wx:for="{{details}}" id="{{de.id}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
+            {{de.title}}
+            {{de.tripType}}
+            {{de.tripStartDate}}
+            {{de.tripDes}}
+            
+            
+    </view>
 
 
 

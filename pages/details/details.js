@@ -11,16 +11,8 @@ Page({
             image:"",
         },
         ],
-          activities:[{
-             id:"", 
-             t_des:"",
-             t_start:"",
-             t_end:"",
-             t_detail:"",
-             t_cost:"",
-             t_type:"",
-             t_picture:[]
-          }],
+        activity: {},
+          
 
           comments:[{comment:""}],
           scrollInto: "",
@@ -47,54 +39,57 @@ Page({
           }
         },
         
-  onLoad: function () {
+  onLoad: function (options) {
    
     const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
     const Activities = new wx.BaaS.TableObject("TOC_trip");
-    
-    const options_id="5fc8e8e7599b310dfc54bbd9";
+  
     // const comment_storyId="5fbd042933015444fc5031e8"
-   
-        UsergetInfo.get(options_id).then((res) => {
+    console.log("detail page options", options);
+    // console.log(this.data.options.id)
+
+    Activities.expand(['tripOwner']).get(options.tripId).then((res) => {
               console.log("halaluya");
               console.log(res);
-              this.setData({ 
-                image:res.data.profilePicture,
-                name:res.data.nickName,
+              this.setData({
+                activity: res.data
               });
+              
         });
-        // Getting all the reviews with movie_id == options.id
-        // set up the query
-        let query = new wx.BaaS.Query();
-        query.compare("tripOwner", "=", options_id);
-        // console.log("jhbjhbj",options_id);
-        const that = this;
-        Activities.setQuery(query)
-            .find()
-            .then((res) => {
-                  const trips = res.data.objects;
-                  const pictures = [];
-                  for(let i = 0; i < trips.length; i++) {
-                    const picturesForOneTrip = trips[i].picture;
-                    pictures.push(...picturesForOneTrip);
-                  }
-                  const remappedTrips = trips.map((trip) => {
-                    return {
-                      ...trip,
-                      tripStartDate: moment(trip.tripStartDate).format('DD/MM/YYYY')
-                    }
-                  })
+        // // Getting all the reviews with movie_id == options.id
+        // // set up the query
+        // let query = new wx.BaaS.Query();
+        // query.compare("tripOwner", "=", options);
+        // // console.log("jhbjhbj",options_id);
+        // const that = this;
+        // Activities.setQuery(query)
+        //       .expand(["userId", "tripOwner"])
+    
+        //     .find()
+        //     .then((res) => {
+        //           const trips = res.data.objects;
+        //           const pictures = [];
+        //           for(let i = 0; i < trips.length; i++) {
+        //             const picturesForOneTrip = trips[i].picture;
+        //             pictures.push(...picturesForOneTrip);
+        //           }
+        //           const remappedTrips = trips.map((trip) => {
+        //             return {
+        //               ...trip,
+        //               tripStartDate: moment(trip.tripStartDate).format('DD/MM/YYYY')
+        //             }
+        //           })
 
-                  console.log('ppp', pictures);
-                  this.setData({
-                  activities: remappedTrips,
-                  pictures: pictures
-                  }); 
+        //           console.log('ppp', pictures);
+        //           this.setData({
+        //           activities: remappedTrips,
+        //           pictures: pictures
+        //           }); 
                 
-                  // console.log(that.t_picture) 
-                  console.log(res);
-              }, 
-              );
+        //           // console.log(that.t_picture) 
+        //           console.log(res);
+        //       }, 
+        //       );
               
         },
         changeIndicatorDots() {
