@@ -1,11 +1,6 @@
 <!--pages/login/login.wxml-->
 
-   <view wx:if="{{currentUser}}">
-      <text style="margin-top:100rpx">You are logged in {{currentUser.nickname}}!</text>
-   </view>
-
-
-<view wx:else>
+<view>
    <view class="header">
       <text>Welcome to The Outdoor Lovers</text>
    </view>
