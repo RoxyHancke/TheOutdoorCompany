@@ -8,17 +8,7 @@ Page({
       image:"",
   },
   ],
-    details:[{
-       id:"", 
-       t_title:"",
-       t_des:"",
-       t_start:"",
-       t_end:"",
-       t_detail:"",
-       t_cost:"",
-       t_type:"",
-       t_picture:[]
-    }],
+    details:[],
     comments:[{comment:""}],
     scrollInto: "",
     inputVal: "",
@@ -51,7 +41,7 @@ onLoad: function () {
 
 toTripDetails: function (e) {
   wx.navigateTo({
-    url: '/pages/details/details',
+    url: `/pages/details/details?tripid=${e.currentTarget.id}`,
   })
   console.log("go to detail page",e);
 },
@@ -60,13 +50,6 @@ toNavigate: function () {
     url: 'pages/details/details',
   })
   },
-
-
-toStories: function (e) {
-  wx.navigateTo({
-    url: `/pages/details/details?id=${e.currentTarget.id}`,
-  });
-},
 
 
 
