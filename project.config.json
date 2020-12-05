@@ -95,6 +95,14 @@
           "name": "pages/home/home",
           "pathName": "pages/home/home",
 
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/create/create",
+          "pathName": "pages/create/create",
+
           "scene": null
         }
       ]
