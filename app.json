@@ -5,7 +5,7 @@
     "pages/details/details",
     "pages/profile/profile",
     "pages/create/create",
-    "pages/index/index"
+    "pages/index/index",
     "pages/editProfile/editProfile"
   ],
   "plugins": {

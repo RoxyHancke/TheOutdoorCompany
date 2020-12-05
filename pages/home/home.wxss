@@ -1,11 +1,40 @@
 /* pages/home/home.wxss */
 
+.drop-down-card {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #023047;
+}
 
+.trip {
+  color: #023047;
+  font-weight: normal;
+  width: 340rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.month {
+  color: #023047;
+  font-weight: normal;
+  width: 340rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .buttons {
   display: flex;
   align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .share-btn {
@@ -18,8 +47,54 @@
   width: 340rpx;
   margin: 0 auto;
 }
-.item{
-  border: solid;
+
+.big-card {
+  justify-content: center;
+  align-items: center;
+  color: #023047;
+  border: solid rgb(241, 238, 238);
+  padding-bottom: 3.2em;
+
+}
+
+.card-product{
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  height: 130px;
+
+} 
+
+.card-product-infos {
+  padding: 15rpx;
+}
+
+.title {
+  font-size: medium;
+  font-weight: bold;
+  color: #219EBC;
+  text-transform: uppercase;
+}
+
+.tripDes {
+  font-size: small;
+  font-weight: normal;
+  color: #023047;
+  text-transform: capitalize;
+}
+
+.tripType {
+  font-size: x-small;
+  font-weight: normal;
+  color: #023047;
+  text-transform: capitalize;
+}
+
+.tripStart {
+  font-size: x-small;
+  font-weight: lighter;
+  color: #023047;
+  text-transform: capitalize;
 }
 
 .register-btn {
@@ -33,38 +108,15 @@
   margin: 0 auto;
 }
 
-container {
+
+.container {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  border-radius: 5rpx;
-  box-shadow: 0 0 15rpx rgba(0,0,0,0.2);
 } 
 
-.drop-down-card {
-  background-size: cover;
-  height: 80rpx;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  color: #023047;
-  border-radius: 12rpx;
-  border: 1rpx solid rgb(241, 238, 238);
-}
 
-.big-card {
-  background-size: cover;
-  height: 200rpx;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  color: #023047;
-  border-radius: 12rpx;
-  border: 1rpx solid rgb(241, 238, 238);
 
-}
 
+/* 
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -76,7 +128,7 @@ container {
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
-}
+} */
 
 
 
