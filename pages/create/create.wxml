@@ -54,7 +54,7 @@
                     <view class="weui-label">Starting date:</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChangeStart">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChangeStart">
                         <view class="weui-input">{{date}}</view>
                     </picker>
                 </view>
@@ -64,7 +64,7 @@
                     <view class="weui-label">Ending date:</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChangeEnd">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChangeEnd">
                         <view class="weui-input">{{date}}</view>
                     </picker>
                 </view>
@@ -84,7 +84,7 @@
             </view>
         </view>
 
-  <!-- choose picture  -->
+  <!-- choose picture 
         <view class="page__bd">
               <view class="weui-cells">
                   <view class="weui-cell">
@@ -94,11 +94,11 @@
                                 <view class="weui-uploader__overview">
                                     <view class="weui-uploader__title">Upload pictures here</view>
                                     <view class="weui-uploader__info">{{files.length}}/2</view>
-                                </view>
+                                </view> -->
                                 <!-- <view class="weui-uploader__tips">
                                   上传提示
                                 </view> -->
-                              </view>
+                              <!-- </view>
                               <view class="weui-uploader__bd">
                                   <view class="weui-uploader__files" id="uploaderFiles">
                                       <block wx:for="{{files}}" wx:key="*this">
@@ -137,7 +137,8 @@
                       </view>
                   </view>
               </view>
-          </view>
+          </view>-->
+     <button type="primary" bindtap="chooseImage">upload picture</button>
      <button class="buttonPinkSmall" form-type="submit" bindtap="goBackToProfile">Submit</button>
   <!-- end of wx eles  -->
     </form>

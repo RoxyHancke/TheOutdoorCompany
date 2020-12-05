@@ -48,6 +48,14 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
     "plugin": {
       "list": []
     },
@@ -88,21 +96,16 @@
           "scene": null
         },
         {
-
-          "name": "pages/details/details",
-          "pathName": "pages/details/details",
-
-          "name": "pages/home/home",
-          "pathName": "pages/home/home",
-
+          "id": -1,
+          "name": "pages/create/create",
+          "pathName": "pages/create/create",
           "query": "",
           "scene": null
         },
         {
           "id": -1,
-          "name": "pages/create/create",
-          "pathName": "pages/create/create",
-
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
           "scene": null
         }
       ]
