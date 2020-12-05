@@ -74,8 +74,9 @@
           "scene": null
         },
         {
-          "name": "pages/home/home",
-          "pathName": "pages/home/home",
+          "id": -1,
+          "name": "pages/editProfile/editProfile",
+          "pathName": "pages/editProfile/editProfile",
           "query": "",
           "scene": null
         },
@@ -87,8 +88,13 @@
           "scene": null
         },
         {
+
           "name": "pages/details/details",
           "pathName": "pages/details/details",
+
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+
           "scene": null
         }
       ]

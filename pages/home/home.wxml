@@ -1,38 +1,36 @@
 
-<image src="/pages/home/nature3.jpg"  style="width:100%"> </image>
+<image src="https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg" style="width:100%"> </image>
 <view class="container">
 
-        <view class="drop-down-card">
-              <view>Trip Type</view>
-              <view>Month</view>
-        </view>
-
-
-    <view class="big-card" > > 
-          <view bindtap="toTripDetails" class="item" wx:for="{{details}}" id="{{de.id}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
-            {{de.title}}
-            {{de.tripType}}
-            {{de.tripStartDate}}
-            {{de.tripDes}}
-            
-            
-    </view>
-
-
-
+   <view class="drop-down-card" style="border-width: thin; box-shadow: 0 0 15rpx rgba(0,0,0,0.2)">
+      <view class="trip" style="border-right: solid; border-width: thin; " >Trip Type</view>
+      <view class="month" >Month</view>
+   </view>
+   <view class="big-card" bindtap="toTripDetails">
+      <block wx:for="{{details}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
+         <view class="card-product" >
+        
+            <image mode="scaleToFill" style="height:300rpx; width:300rpx;" src="{{de.picture[0]}}"></image>
+          
+            <view class="card-product-infos">
+               <view class="title"> {{de.title}} </view>
+               <view class="tripDes">{{de.tripDes}} </view>
+               <view class="tripType">{{de.tripType}} </view>
+               <view class="tripStart">{{de.tripStartDate}} </view>
+            </view>
+         </view>
+      </block>
+   </view>
+   <!-- <view class="buttons" style="">
+      <button class="share-btn"> Share</button>
+      <button class="register-btn"> Register</button>
+   </view> -->
 </view>
 
 
 
 
-</view>
 
-
-
-<view class="buttons">
- <button class="share-btn"> Share</button>
-  <button class="register-btn"> Register</button>
-</view>
 
 
 

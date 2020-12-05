@@ -47,6 +47,12 @@ toTripDetails: function(e){
       url: `/pages/details/details?tripId=${e.currentTarget.id}`,
     });
     
+toTripDetails: function (e) {
+  wx.navigateTo({
+    url: `/pages/details/details?tripid=${e.currentTarget.id}`,
+  })
+  console.log("go to detail page",e);
+
 },
 toNavigate: function () {
   wx.switchTab({
@@ -55,13 +61,7 @@ toNavigate: function () {
   },
 
 
-toStories: function (e) {
-  console.log("ndkjnagf",e)
-  // wx.navigateTo({
-    // url: `/pages/details/details?id=${e.currentTarget.id}`,
-  // });
 },
-
 
 
 
