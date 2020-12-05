@@ -1,8 +1,4 @@
 /* pages/home/home.wxss */
-
-
-
-
 .buttons {
   display: flex;
   align-items: flex-end;
