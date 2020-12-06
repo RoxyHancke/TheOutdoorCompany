@@ -27,7 +27,7 @@ onLoad: function () {
 
   Details.find().then((res) => {
     this.setData({
-      details:res.data.objects,
+      items:res.data.objects,
     });
    moment(This.data.objects.tripStartDate).format('DD/MM/YYYY')
     console.log("detail page result", res);
@@ -41,16 +41,13 @@ onLoad: function () {
   },
 
 toTripDetails: function(e){
-  
+
+  console.log("to trip details",e)
+
     wx.navigateTo({
       url: `/pages/details/details?tripId=${e.currentTarget.id}`,
-    });
-
-},
-
-    
-                
 
 
-
+      })
+    }
 })

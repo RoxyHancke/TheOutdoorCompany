@@ -102,8 +102,27 @@ bindDateChangeEnd: function(e) {
   })
 },
 //upload the images:
-chooseImage:function(e){
+chooseImage: function(e){
+  const page = this
+  wx.chooseImage({
+    // chooseImage settings
+    success: function(res) {
+      let File = new wx.BaaS.File()
+      let fileParams = {filePath: res.tempFilePaths[0]}
+      let metaData = {categoryName: 'SDK'}
+  
+      File.upload(fileParams, metaData).then(res => {
+    
+        let photo = res.data.path;
+        page.setData({
+        imageURL: photo
+        });
+      }, error => {
 
+      })
+    
+    }
+  })
 },
 
  //submit the form
@@ -127,12 +146,18 @@ chooseImage:function(e){
     tripEndDate:this.data.tripEndDate,
     title:e.detail.value.title,
     tripDetail:e.detail.value.tripDetail,
-    costEst:this.data.costEst
-  });
+    costEst:this.data.costEst,
+    picture:[this.data.imageURL]
+    });
     newTrip.save().then(res => {
       console.log("set the data to ifanr",res)
     }, err => {
       console.log("not successful",err)
     })
+    },
+    goBackToProfile:function(e){
+      wx.switchTab({
+        url: '/pages/home/home',
+      })
     }
 })
