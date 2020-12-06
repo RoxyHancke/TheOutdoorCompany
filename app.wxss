@@ -1,13 +1,16 @@
 /**app.wxss**/
 
 @font-face {
-  font-family: 'Crimson Text';
-  src: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkRNKqpvQmJpVAG.ttf) format
+  font-family: 'Lato';
+  src: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1klmwrbvyNu7pA3s.ttf) format
   ("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+.container {
+  font-family: Lato, sans-serif;
+}
 /*!
  * WeUI v2.4.2 (https://github.com/weui/weui-wxss)
  * Copyright 2020 Tencent, Inc.

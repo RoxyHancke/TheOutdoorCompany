@@ -1,3 +1,4 @@
+
 <!-- <view class="page" data-weui-theme="{{theme}}"> -->
   <view class="container">
         <!-- Trying to Scrool horizantal  -->
@@ -57,6 +58,4 @@
                 <button class="share-btn ">Share</button>
                 <button classs="">Register</button>
 
-            </view>
-</view> 
-<!-- </view> -->
+

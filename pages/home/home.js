@@ -8,7 +8,7 @@ Page({
       image:"",
   },
   ],
-    details:[],
+    items:[],
     comments:[{comment:""}],
     scrollInto: "",
     inputVal: "",
@@ -29,6 +29,7 @@ onLoad: function () {
     this.setData({
       items:res.data.objects,
     });
+   moment(This.data.objects.tripStartDate).format('DD/MM/YYYY')
     console.log("detail page result", res);
 
   }, (error) => {
@@ -40,13 +41,12 @@ onLoad: function () {
   },
 
 toTripDetails: function(e){
+
   console.log("to trip details",e)
+
     wx.navigateTo({
-      // details?tripOwner=fii23fi09r29038r3r290,
       url: `/pages/details/details?tripId=${e.currentTarget.id}`,
- 
-    })
-  }
+
 
       })
     }

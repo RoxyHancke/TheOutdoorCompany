@@ -7,9 +7,11 @@
       <view class="month" >Month</view>
    </view>
    <view class="big-card" >
+
       <view bindtap="toTripDetails" wx:for="{{items}}" id="{{item.id}}" wx:key="id">
          <view class="card-product">
             <image mode="scaleToFill" style="height:300rpx; width:300rpx;" src="{{item.picture[0]}}"></image>
+
             <view class="card-product-infos">
                <view class="title"> {{item.title}} </view>
                <view class="tripDes">{{item.tripDes}} </view>
