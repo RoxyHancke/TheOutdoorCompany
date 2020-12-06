@@ -33,7 +33,7 @@
                 </scroll-view>
                 <view class="article_section">
                     {{activity.tripStartDate}}
-                    <textarea class="article_section">{{activity.tripDes}}</textarea>
+                    <textarea class="article_section">{{activity.title}}</textarea>
                 </view>
                 <view class="avatar_section">
                     <image class="avatar" src="{{image}}"></image>
