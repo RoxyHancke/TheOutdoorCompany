@@ -8,7 +8,7 @@ Page({
       image:"",
   },
   ],
-    details:[],
+    items:[],
     comments:[{comment:""}],
     scrollInto: "",
     inputVal: "",
@@ -29,6 +29,7 @@ onLoad: function () {
     this.setData({
       details:res.data.objects,
     });
+   moment(This.data.objects.tripStartDate).format('DD/MM/YYYY')
     console.log("detail page result", res);
 
   }, (error) => {
@@ -40,28 +41,15 @@ onLoad: function () {
   },
 
 toTripDetails: function(e){
-  console.log("HALALUYA",e.currentTarget.id )
   
     wx.navigateTo({
-      // details?tripOwner=fii23fi09r29038r3r290,
       url: `/pages/details/details?tripId=${e.currentTarget.id}`,
     });
+
+},
+
     
-toTripDetails: function (e) {
-  wx.navigateTo({
-    url: `/pages/details/details?tripid=${e.currentTarget.id}`,
-  })
-  console.log("go to detail page",e);
-
-},
-toNavigate: function () {
-  wx.switchTab({
-    url: 'pages/details/details',
-  })
-  },
-
-
-},
+                
 
 
 

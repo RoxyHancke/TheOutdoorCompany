@@ -1,62 +1,59 @@
+
 <!-- <view class="page" data-weui-theme="{{theme}}"> -->
-  <view class="container">
-        <!-- Trying to Scrool horizantal  -->
-        <!-- <view class="page-body">
-            <view class="page-section-spacing"> 
-                                        <view class="page-section-spacing">
-                                            <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-                                                <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
-                                                <view class="" wx:for="{{pictures}}" wx:for-item="pic" wx:key="id" wx:for-index="acx">
-                                                        <view>Nefisssss</view>
-                                                        <image class="" src="{{pic}}">Picture</image>
-                                                </view>     
-                                            </scroll-view>
-                    </view>
+<view class="container">
+   <!-- Trying to Scrool horizantal  -->
+   <!-- <view class="page-body">
+      <view class="page-section-spacing"> 
+                                  <view class="page-section-spacing">
+                                      <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+                                          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+                                          <view class="" wx:for="{{pictures}}" wx:for-item="pic" wx:key="id" wx:for-index="acx">
+                                                  <view>Nefisssss</view>
+                                                  <image class="" src="{{pic}}">Picture</image>
+                                          </view>     
+                                      </scroll-view>
+              </view>
+      </view>
+      </view> -->
+   <!-- <text>Horizontal Scroll\n横向滚动</text> -->
+   <!-- ********** swiper -->
+   <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{activity.picture}}">
+         <swiper-item>
+            <image src="{{item}}" class="slide-image" width="200" height="400"/>
+         </swiper-item>
+      </block>
+   </swiper>
+   <!-- ********************************* swiper -->
+   <view class="page-section">
+      <view class="page_section">
+         <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" style="height: 100rpx" class="list">
+         </scroll-view>
+         <view class="article_section">
+            {{activity.tripStartDate}}
+            <textarea class="article_section">{{activity.tripDes}}</textarea>
+         </view>
+         <view class="avatar_section">
+            <image class="avatar" src="{{image}}"></image>
+            <text>{{name}}</text>
+            <view>
+               TRIP DESCRIPTON
+               <text>{{activity.tripDes}}</text>
             </view>
-        </view> -->
-        <!-- <text>Horizontal Scroll\n横向滚动</text> -->
-        <!-- ********** swiper -->
-
-               <swiper indicator-dots="{{indicatorDots}}"
-                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                    <block wx:for="{{activity.picture}}">
-                    <swiper-item>
-                    <image src="{{item}}" class="slide-image" width="200" height="400"/>
-                </swiper-item>
-                                    </block>
-                                    </swiper>
-                                   
-<!-- ********************************* swiper -->
-        <view class="page-section">
-            <view class="page_section"> 
-                <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" style="height: 100rpx" class="list">
-                </scroll-view>
-                <view class="article_section">
-                    {{activity.tripStartDate}}
-                    <textarea class="article_section">{{activity.tripDes}}</textarea>
-                </view>
-                <view class="avatar_section">
-                    <image class="avatar" src="{{image}}"></image>
-                    <text>{{name}}</text>
-                    <view>TRIP DESCRIPTON
-                    <text>{{activity.tripDes}}</text>
-                    </view>
-                </view>
-                <textarea class="article">{{activity.tripDetail}}</textarea>
-                </view>
-
-                <view>
-                        <view>CONTACT INFORMATION</view>
-                        <view>Name: {{activity.tripOwner.id}}</view>
-                </view>
-                <view>
-                    LOCATION DETAILS
-                </view>
-        </view>
-            <view clas="page_bottom">       
-                <button class="share-btn ">Share</button>
-                <button classs="">Register</button>
-
-            </view>
-</view> 
-<!-- </view> -->
+         </view>
+         <textarea class="article">{{activity.tripDetail}}</textarea>
+      </view>
+      <view>
+         <view>CONTACT INFORMATION</view>
+         <view>Name: {{activity.tripOwner.id}}</view>
+      </view>
+      <view>
+         LOCATION DETAILS
+      </view>
+   </view>
+   <view class="buttons" style="">
+      <button class="share-btn"> Share</button>
+      <button class="register-btn"> Register</button>
+   </view>
+</view>
