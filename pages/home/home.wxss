@@ -7,11 +7,11 @@
   align-items: center;
   text-align: center;
   color: #023047;
+  
 }
 
 .trip {
-  color: #023047;
-  font-weight: normal;
+  font-weight: bold;
   width: 340rpx;
   height: 80rpx;
   display: flex;
@@ -20,8 +20,7 @@
 }
 
 .month {
-  color: #023047;
-  font-weight: normal;
+  font-weight: bold;
   width: 340rpx;
   height: 80rpx;
   display: flex;
@@ -33,7 +32,7 @@
   justify-content: center;
   align-items: center;
   color: #023047;
-  border: solid rgb(241, 238, 238);
+  border: 2px solid rgba(248,248,248,0.03);
 
 }
 
@@ -41,16 +40,25 @@
   box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  height: 130px;
+  height: 300rpx;
+  margin: 10rpx 0 10rpx;
 } 
 
+.picture {
+  height: 300rpx;
+  width: 300rpx
+}
+
 .card-product-infos {
-  padding: 15rpx;
+  padding: 0 0 15rpx 15rpx; 
   font-family: Lato, sans-serif;
+  font-weight: bolder;
+  height: 200rpx;
+  width: 300rpx;
 }
 
 .title {
-  font-size: medium;
+  font-size: small;
   font-weight: bold;
   color: #219EBC;
   text-transform: uppercase;

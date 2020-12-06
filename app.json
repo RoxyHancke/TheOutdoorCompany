@@ -19,6 +19,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Outdoor Lovers",
     "navigationBarTextStyle": "black"
+  
   },
   "tabBar": {
     "backgroundColor": "#FFF",

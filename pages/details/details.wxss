@@ -4,6 +4,15 @@
   padding-bottom: 3.2em;
 }
 
+.swiper {
+  height:400rpx;
+  width: 750rpx;
+  /* position: relative; */
+}
+/* 
+.slide-image {
+position: relative;
+} */
 
 .userinfo {
   display: flex;
@@ -11,11 +20,12 @@
   align-items: center;
 }
 
-.userinfo-avatar {
+.avatar {
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
+  position: relative;
 }
 .avatar_section{
 margin-top:85rpx;
@@ -26,91 +36,92 @@ margin-top: 30rpx;
 padding: 20rpx;
 display: block;
 }
-.page__desc{
 
-}
-.page__bd{
-
-}
-.article{
-
-}
-.article__h1{
-
-}
-.article_section{
-  display:"flex";
-  flex-direction: row;
-  margin:5px;
-  padding:0 10px;
-  text-align:center;
-  background-color:lightgray;
-  height:2.3em;line-height:2.3em;
+.tripTitle {
+  /* box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  height: 120rpx;
+  margin: 0 auto;
+  padding: 15rpx; */
+  font-size: larger;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  background-color: black;
   
 }
-.article__h3{
 
+.tripStartDate{
+    box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center; 
+    justify-content: start;
+    height: 80rpx;
+    margin: 0 auto;
+    padding: 20rpx;
+    font-weight: bold;
+  font-size: small;
+    
 }
-.article__p{
-
-}
-.article__img{
-
-}
-.green{
-  color: #09BB07;
-}
-.red{
-  color: #F76260;
-}
-.blue{
-  color: #10AEFF;
-}
-.yellow{
-  color: #FFBE00;
-}
-.gray{
-  color: #C9C9C9;
-}
-
-.strong{
+.tripDes {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center; 
+  justify-content: start;
+  height: 80rpx;
+  margin: 0 auto;
+  padding: 20rpx;
   font-weight: bold;
+  font-size: small;
 }
 
-.bc_green{
-  background-color: #09BB07;
-}
-.bc_red{
-  background-color: #F76260;
-}
-.bc_blue{
-  background-color: #10AEFF;
-}
-.bc_yellow{
-  background-color: #FFBE00;
-}
-.bc_gray{
-  background-color: #C9C9C9;
+.attendees {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: block;
+  align-items: center; 
+  justify-content: flex-start;
+  height: 250rpx;
+  margin: 0 auto;
+  padding: 20rpx;
+  font-weight: bold;
+  font-size: small;
 }
 
-.tc{
-  text-align: center;
+.tripDescription {
+  font-weight: bold;
+  font-size: small;
+  padding: 0 0 15rpx 0;
+ 
 }
 
-input{
-  padding: 10px 15px;
-  background-color: #fff;
-}
-checkbox, radio{
-  margin-right: 5px;
+.tripInfo {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  align-items: center; 
+  justify-content: start;
+  margin: 0 auto;
+  padding: 20rpx;
+  height: 100%;
+  font-size: small;
+  text-align: start;
 }
 
-.btn-area{
-  padding: 0 15px;
+.contactInfo {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  align-items: center; 
+  justify-content: start;
+  margin: 0 auto;
+  padding: 20rpx;
+  height: 120rpx;
+  font-size: small;
+  text-align: start;
 }
-.btn-area button{
-  margin-top: 10px;
-  margin-bottom: 10px;
+.contact{
+    font-weight: bold;
+    font-size: small;
+    padding: 0 0 15rpx 0;
+   
 }
 
 .page {
@@ -121,38 +132,7 @@ checkbox, radio{
   font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
   overflow: hidden;
 }
-.page__hd{
-  padding: 40px;
-}
-.page__title{
-  display: block;
-  font-size: 20px;
-}
-.page__desc{
-  margin-top: 5px;
-  font-size: 14px;
-  color: #888888;
-}
 
-.section{
-  margin-bottom: 40px;
-  display: block;
-}
-.section_gap{
-  padding: 0 15px;
-}
-.section__title{
-  margin-bottom: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.section_gap .section__title{
-  padding-left: 0;
-  padding-right: 0;
-}
-.section__ctn{
-
-}
 
 .page-section-spacing{
   margin-top: 60rpx;
@@ -187,26 +167,30 @@ checkbox, radio{
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color:white;
 }
 
 .share-btn {
-  color: white;
+  color: rgba(2, 2, 2, 0.815);
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
-  font-weight: bold;
-  background: #8ECAE6;
-  transition:  0.3s ease;
+  font-weight: normal;
+  background: rgb(235,235, 235);
+  transition: 0.3s ease;
   width: 340rpx;
   margin: 0 auto;
+  font-size: medium;
+  
 }
 
 .register-btn {
   color: white;
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
-  font-weight: bold;
+  font-weight: normal;
   background: #FB8500;
   transition:  0.3s ease;
   width: 340rpx;
   margin: 0 auto;
+  font-size: medium;
 }
