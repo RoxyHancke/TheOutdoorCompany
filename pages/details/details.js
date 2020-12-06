@@ -8,6 +8,7 @@ Page({
             id: "",
             name: "",
             image: "",
+           
         }],
         activity: {
           tripDes:""
@@ -31,7 +32,15 @@ Page({
 
         }],
         options_id: "",
-        pictures: []
+        pictures: [],
+
+        iconSize: [20],
+        iconColor: [
+        'rgb(33, 158, 188)'
+        ],
+        iconType: [
+          'waiting',
+        ]
     },
     onShareAppMessage() {
         return {
