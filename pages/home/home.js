@@ -44,6 +44,10 @@ toTripDetails: function(e){
     wx.navigateTo({
       // details?tripOwner=fii23fi09r29038r3r290,
       url: `/pages/details/details?tripId=${e.currentTarget.id}`,
+ 
+    })
+  }
+
       })
     }
 })
