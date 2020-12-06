@@ -6,20 +6,18 @@
       <view class="trip" style="border-right: solid; border-width: thin; " >Trip Type</view>
       <view class="month" >Month</view>
    </view>
-   <view class="big-card" bindtap="toTripDetails">
-      <block wx:for="{{details}}" wx:for-item="de" wx:key="id" wx:for-index="dex">
-         <view class="card-product" >
-        
-            <image mode="scaleToFill" style="height:300rpx; width:300rpx;" src="{{de.picture[0]}}"></image>
-          
+   <view class="big-card" >
+      <view bindtap="toTripDetails" wx:for="{{items}}" id="{{item.id}}" wx:key="id">
+         <view class="card-product">
+            <image mode="scaleToFill" style="height:300rpx; width:300rpx;" src="{{item.picture[0]}}"></image>
             <view class="card-product-infos">
-               <view class="title"> {{de.title}} </view>
-               <view class="tripDes">{{de.tripDes}} </view>
-               <view class="tripType">{{de.tripType}} </view>
-               <view class="tripStart">{{de.tripStartDate}} </view>
+               <view class="title"> {{item.title}} </view>
+               <view class="tripDes">{{item.tripDes}} </view>
+               <view class="tripType">{{item.tripType}} </view>
+               <view class="tripStart">{{item.tripStartDate}} </view>
             </view>
          </view>
-      </block>
+      </view>
    </view>
    <!-- <view class="buttons" style="">
       <button class="share-btn"> Share</button>
@@ -28,10 +26,11 @@
 </view>
 
 
+<!-- removed
 
+wx:for-index="dex"
 
-
-
+in bindtap -->
 
 
 

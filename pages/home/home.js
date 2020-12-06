@@ -27,7 +27,7 @@ onLoad: function () {
 
   Details.find().then((res) => {
     this.setData({
-      details:res.data.objects,
+      items:res.data.objects,
     });
     console.log("detail page result", res);
 
@@ -40,12 +40,14 @@ onLoad: function () {
   },
 
 toTripDetails: function(e){
-  console.log("HALALUYA",e.currentTarget.id )
-  
+  console.log("to trip details",e)
     wx.navigateTo({
       // details?tripOwner=fii23fi09r29038r3r290,
       url: `/pages/details/details?tripId=${e.currentTarget.id}`,
+ 
     })
   }
 
+      })
+    }
 })

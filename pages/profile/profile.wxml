@@ -24,9 +24,24 @@
     </view>
 
 <!-- short bio box -->
-    <view style=" border-style: solid; border-color: black;">
+    <view>
       <text>My bio:</text>
       {{items.shortBio}}
     </view>
+<!-- trips -->
+  <view class="big-card">
+    <text>My trips</text>
+    <view wx:for="{{trips}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
+         <view class="card-product">
+            <image mode="scaleToFill" style="height:300rpx; width:300rpx;" src="{{trip.picture[0]}}"></image>
+            <view class="card-product-infos">
+               <view class="title"> {{trip.title}} </view>
+               <view class="tripDes">{{trip.tripDes}} </view>
+               <view class="tripType">{{trip.tripType}} </view>
+               <view class="tripStart">{{trip.tripStartDate}} </view>
+            </view>
+         </view>
+      </view>
+  </view>
   </view>
 </view>
