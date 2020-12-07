@@ -19,6 +19,6 @@
                     </picker>
     <text>Tell us more about you:</text>
     <input name="shortBio" type="text" placeholder="bio"></input>
-    <button class="buttonPinkSmall" form-type="submit" bindtap="goBackToProfile">Submit</button>
+    <button class="button" form-type="submit" bindtap="goBackToProfile">Submit</button>
   </form>
 </view>

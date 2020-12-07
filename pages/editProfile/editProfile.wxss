@@ -1,1 +1,17 @@
 /* pages/editProfile/editProfile.wxss */
+
+.button {
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color:#FB8500;
+  color: white;
+  padding: 5rpx 5rpx;
+  border-radius: 5rpx;
+  font-weight: bold;
+  transition: 0.3s ease;
+  width: 450rpx;
+  margin: 0 auto;
+  font-size: medium;
+  
+}

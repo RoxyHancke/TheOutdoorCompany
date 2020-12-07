@@ -46,10 +46,17 @@
                 <view class="tripDes"> 📍{{activity.tripDes}}</view>   
                 
                
-                <!-- <view class="avatar_section"> -->
+        
                 <view class="attendees"> 
-                <view>ATTENDEES</view>
+
+                <view style="padding: 10rpx">ATTENDEES</view>
+
+                <view style="padding: 8rpx">35/40 Attendees*</view>
+
+                <progress percent="80" color="#219EBC" active />
+
                  <image class="avatar" src="https://media.ifanrusercontent.com/tavatar/0e/e2/0ee2ac1145d9d5d33adb27b9a12e2fcbf9918367.jpg"></image>
+                 
             
                 </view>
 

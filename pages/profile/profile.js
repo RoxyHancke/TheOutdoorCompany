@@ -109,4 +109,14 @@ Page({
     })
   },
 
-})  
+  toTripDetails: function(e){
+  
+      wx.navigateTo({
+        url: `/pages/details/details?tripId=${e.currentTarget.id}`,
+  
+  
+        })
+
+},
+
+})
