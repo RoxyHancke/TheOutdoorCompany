@@ -27,10 +27,7 @@ position: relative;
   border-radius: 50%;
   position: relative;
 }
-.avatar_section{
-margin-top:85rpx;
- padding: 30rpx;
-}
+
 .page__title{
 margin-top: 30rpx;
 padding: 20rpx;
@@ -82,7 +79,7 @@ display: block;
   display: block;
   align-items: center; 
   justify-content: flex-start;
-  height: 250rpx;
+  height: 300rpx;
   margin: 0 auto;
   padding: 20rpx;
   font-weight: bold;
@@ -124,17 +121,17 @@ display: block;
    
 }
 
-.page {
+/* .page {
   min-height: 100%;
   flex: 1;
   background-color: #FBF9FE;
   font-size: 16px;
   font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
   overflow: hidden;
-}
+} */
 
 
-.page-section-spacing{
+/* .page-section-spacing{
   margin-top: 60rpx;
 }
 .scroll-view_H{
@@ -158,7 +155,7 @@ display: block;
   display: flex;
   flex-direction: row;
   margin-bottom: 80rpx;
-}
+} */
 
 
 .buttons {

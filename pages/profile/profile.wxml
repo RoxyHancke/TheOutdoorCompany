@@ -1,9 +1,10 @@
 <!--pages/userinfo/userinfo.wxml-->
  
-<view>
+<view class="container">
   <!-- go to log in page if there is no userinfo -->
   <view wx:if="{{!userInfo.id}}">
-     <button type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">log in to edit profile</button>
+    
+    <button class="login_button" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Log in to edit profile</button>
   </view>
   <view wx:else>
 <!-- personal info box -->
@@ -12,28 +13,29 @@
       <image class="avatar" src="{{items.profilePicture}}"></image>
       </view>
 
-      <view>
-      <text>I'm {{items.nickName}}</text>
+      <view class="name">
+      <view> {{items.nickName}}</view>
       </view>
-      <view>
-      {{items.interest1}} {{items.interest2}} {{items.interest3}}
+      <view class="interest">
+      {{items.interest1}}, {{items.interest2}}, {{items.interest3}}
       </view> 
       <view>
-        <button class="buttonPinkSmall" bindtap="editProfile">Edit Profile</button>
+        <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
       </view>
     </view>
 
 <!-- short bio box -->
-    <view>
-      <text>My bio:</text>
-      {{items.shortBio}}
+    <view class="bio_box">
+      <view class="myBio">My bio</view> 
+      <view  class="bio"> {{items.shortBio}} </view>
+    </view>
     </view>
 <!-- trips -->
   <view class="big-card">
-    <text>My trips</text>
-    <view wx:for="{{trips}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
+    <view class="myTrips">My trips</view>
+    <view bindtap="toTripDetails" wx:for="{{trips}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
          <view class="card-product">
-            <image mode="scaleToFill" style="height:300rpx; width:300rpx;" src="{{trip.picture[0]}}"></image>
+            <image mode="scaleToFill" class="picture" src="{{trip.picture[0]}}"></image>
             <view class="card-product-infos">
                <view class="title"> {{trip.title}} </view>
                <view class="tripDes">{{trip.tripDes}} </view>
@@ -44,4 +46,3 @@
       </view>
   </view>
   </view>
-</view>

@@ -37,7 +37,7 @@
 }
 
 .card-product{
-  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   height: 300rpx;
@@ -54,12 +54,12 @@
   font-family: Lato, sans-serif;
   font-weight: bolder;
   height: 200rpx;
-  width: 300rpx;
+  width: 400rpx;
 }
 
 .title {
   font-size: small;
-  font-weight: bold;
+  font-weight: bolder;
   color: #219EBC;
   text-transform: uppercase;
 }
@@ -67,7 +67,7 @@
 .tripDes {
   font-size: small;
   font-weight: normal;
-  color: #023047;
+  color: #FB8500;
   text-transform: capitalize;
 }
 
@@ -85,21 +85,11 @@
   text-transform: capitalize;
 }
 
-.register-btn {
-  color: white;
-  padding: 5rpx 5rpx;
-  border-radius: 5rpx;
-  font-weight: bold;
-  background: #FB8500;
-  transition:  0.3s ease;
-  width: 340rpx;
-  margin: 0 auto;
-}
-
 
 .container {
   height: 100%;
   font-family: Lato;
+  padding: 9rpx;
 } 
 
 
