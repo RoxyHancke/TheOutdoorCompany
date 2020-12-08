@@ -20,6 +20,7 @@ position: relative;
   align-items: center;
 }
 
+
 .avatar {
   width: 128rpx;
   height: 128rpx;
@@ -33,6 +34,7 @@ margin-top: 30rpx;
 padding: 20rpx;
 display: block;
 }
+
 
 .tripTitle {
   /* box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
@@ -121,42 +123,6 @@ display: block;
    
 }
 
-/* .page {
-  min-height: 100%;
-  flex: 1;
-  background-color: #FBF9FE;
-  font-size: 16px;
-  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-  overflow: hidden;
-} */
-
-
-/* .page-section-spacing{
-  margin-top: 60rpx;
-}
-.scroll-view_H{
-  white-space: nowrap;
-}
-.scroll-view-item{
-  height: 300rpx;
-}
-.scroll-view-item_H{
-  display: inline-block;
-  width: 100%;
-  height: 300rpx;
-}
-
-.item{
-  border: solid;
-}
-
-
-.page_bottom {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 80rpx;
-} */
-
 
 .buttons {
   display: flex;
@@ -187,7 +153,9 @@ display: block;
   font-weight: normal;
   background: #FB8500;
   transition:  0.3s ease;
-  width: 340rpx;
+  width: 100rpx;
   margin: 0 auto;
+
   font-size: medium;
 }
+

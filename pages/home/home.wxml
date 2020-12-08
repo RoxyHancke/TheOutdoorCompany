@@ -6,6 +6,7 @@
       <view class="trip" style="border-right: solid; border-width: thin; " >Trip Type</view>
       <view class="month" >Month</view>
    </view>
+
    <view class="big-card" >
 
       <view bindtap="toTripDetails" wx:for="{{items}}" id="{{item.id}}" wx:key="id">
