@@ -64,23 +64,18 @@
                   <view class="tripDescription"> TRIP DESCRIPTION </view> 
                 <view>{{activity.tripDetail}}</view>
             </view>
-                </view>
+         
 
                 <view class="contactInfo">
                         <view class="contact">CONTACT INFORMATION</view>
-                        <view>Name: {{activity.tripOwner.id}}</view>
+                        <view>Name:{{name}}</view>
                 </view>
                
         </view>
         <view class="buttons" style="">
       <button class="share-btn"> Share</button>
-      <button class="register-btn"> Register</button>
+      <button bindtap="register" class="register-btn"> Register</button>
    </view>
 
         </view>
-
-<<<<<<< Updated upstream
-=======
         </view>
->>>>>>> Stashed changes
-
