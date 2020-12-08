@@ -7,72 +7,60 @@
   align-items: center;
   text-align: center;
   color: #023047;
+  
 }
 
 .trip {
-  color: #023047;
-  font-weight: normal;
+  font-weight: bold;
   width: 340rpx;
   height: 80rpx;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Lato;
 }
 
 .month {
-  color: #023047;
-  font-weight: normal;
+  font-weight: bold;
   width: 340rpx;
   height: 80rpx;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-
-.buttons {
-  display: flex;
-  align-items: flex-end;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.share-btn {
-  color: white;
-  padding: 5rpx 5rpx;
-  border-radius: 5rpx;
-  font-weight: bold;
-  background: #8ECAE6;
-  transition:  0.3s ease;
-  width: 340rpx;
-  margin: 0 auto;
 }
 
 .big-card {
   justify-content: center;
   align-items: center;
   color: #023047;
-  border: solid rgb(241, 238, 238);
-  padding-bottom: 3.2em;
+  border: 2px solid rgba(248,248,248,0.03);
 
 }
 
 .card-product{
-  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  height: 130px;
-
+  height: 300rpx;
+  margin: 10rpx 0 10rpx;
 } 
 
+.picture {
+  height: 300rpx;
+  width: 300rpx
+}
+
 .card-product-infos {
-  padding: 15rpx;
+  padding: 0 0 15rpx 15rpx; 
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  height: 200rpx;
+  width: 400rpx;
 }
 
 .title {
-  font-size: medium;
-  font-weight: bold;
+  font-size: small;
+  font-weight: bolder;
   color: #219EBC;
   text-transform: uppercase;
 }
@@ -80,7 +68,7 @@
 .tripDes {
   font-size: small;
   font-weight: normal;
-  color: #023047;
+  color: #FB8500;
   text-transform: capitalize;
 }
 
@@ -98,38 +86,15 @@
   text-transform: capitalize;
 }
 
-.register-btn {
-  color: white;
-  padding: 5rpx 5rpx;
-  border-radius: 5rpx;
-  font-weight: bold;
-  background: #FB8500;
-  transition:  0.3s ease;
-  width: 340rpx;
-  margin: 0 auto;
-}
-
 
 .container {
   height: 100%;
+  font-family: Lato;
+  padding: 9rpx;
 } 
 
 
 
-
-/* 
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-} */
 
 
 

@@ -5,10 +5,10 @@ Page({
   data: {
     userInfo:[{
       id:"",
-      image:"",
+      image:""
   },
   ],
-    details:[],
+    items:[],
     comments:[{comment:""}],
     scrollInto: "",
     inputVal: "",
@@ -18,6 +18,7 @@ Page({
 
     }],
     options_id:"",
+    tripTypeOptions:['Short hiking','Long hiking','Camping','Glamping','Trail running','Mountaineering','Biking','Others']
   },
 
 
@@ -30,6 +31,7 @@ onLoad: function () {
                 details:res.data.objects,
               });
               console.log("detail page result", res);
+
 
             }, (error) => {
               console.log("error", error);
@@ -49,4 +51,13 @@ toNavigate: function () {
     url: 'pages/details/details',
   })
   },
+  
+tripTyperPicker:function(e){
+  console.log("trip type filter",e)
+  console.log("trip value",e.detail.value)
+  wx.navigateTo({
+      url:`/pages/picker/picker?id=${e.detail.value}`
+  })
+}
 })
+

@@ -80,22 +80,41 @@
           "scene": null
         },
         {
+
+          "id": -1,
+
           "name": "pages/home/home",
           "pathName": "pages/home/home",
           "query": "",
           "scene": null
         },
-      
+        {
+
+          "id": -1,
+          "name": "pages/create/create",
+          "pathName": "pages/create/create",
+          "query": "",
+          "scene": null
+        },
         {
           "name": "pages/details/details",
           "pathName": "pages/details/details",
           "query": "",
           "scene": null
         },
-      
         {
+
+        
           "name": "pages/aboutUs/aboutUs",
           "pathName": "pages/aboutUs/aboutUs",
+          "scene": null
+          
+        }, 
+        
+        {
+
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "scene": null
         }
       ]

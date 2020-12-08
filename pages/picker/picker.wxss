@@ -1,4 +1,4 @@
-/* pages/profile/profile.wxss */
+/* pages/picker/picker.wxss */
 
 .namebox{
   display: flex;
