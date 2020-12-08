@@ -1,4 +1,3 @@
-// pages/details/details.js
 const app = getApp();
 const img = '../image/location.png'
 import moment from 'moment';
@@ -131,26 +130,28 @@ Page({
          
    
     
-        changeIndicatorDots() {
-          this.setData({
+
+
+    changeIndicatorDots() {
+        this.setData({
             indicatorDots: !this.data.indicatorDots
-          })
-        },
-      
-        changeAutoplay() {
-          this.setData({
+        })
+    },
+
+    changeAutoplay() {
+        this.setData({
             autoplay: !this.data.autoplay
-          })
-        },
-      
-        intervalChange(e) {
-          this.setData({
+        })
+    },
+
+    intervalChange(e) {
+        this.setData({
             interval: e.detail.value
-          })
-        },
-      
-        durationChange(e) {
-          this.setData({
+        })
+    },
+
+    durationChange(e) {
+        this.setData({
             duration: e.detail.value
           })
         },

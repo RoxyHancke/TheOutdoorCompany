@@ -1,3 +1,4 @@
+
 <!-- <view class="page" data-weui-theme="{{theme}}"> -->
   <view class="container">
         <!-- Trying to Scrool horizantal  -->
@@ -17,11 +18,12 @@
         <!-- <text>Horizontal Scroll\n横向滚动</text> -->
         <!-- ********** swiper -->
 
-               <swiper indicator-dots="{{indicatorDots}}"
+               <swiper class="swiper" mode="scaleToFill" scaletoindicator-dots="{{indicatorDots}}"
                      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
                     <block wx:for="{{activity.picture}}">
                     <swiper-item>
-                    <image src="{{item}}" class="slide-image" width="200" height="400"/>
+                    <image src="{{item}}" class="slide-image" width="100%" height="400"/>
+                    <view class="tripTitle">{{activity.title}}</view>
                 </swiper-item>
                                     </block>
                                     </swiper>
@@ -29,52 +31,51 @@
 <!-- ********************************* swiper -->
         <view class="page-section">
             <view class="page_section"> 
-                <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" style="height: 100rpx" class="list">
-                </scroll-view>
-                <view class="article_section">
-                    {{trip.tripStartDate}}
-                    <text class="section_title">📍 {{activity.tripDes}}</text>
-                </view>
-                <view class="section_title"><text>Active Leaders</text></view>
-                        <!-- <view class="avatar_section">   -->
-                            <image class="userinfo-avatar" src="{{image}}"></image>
-                            <text class="section_details">{{name}}</text>
-                        <!-- </view>         -->
-                <view class="section_title"><text>Attendees</text></view>
-                        <!-- <view class="avatar_section">   -->
-                            <!-- <image class="userinfo-avatar" src="{{image}}"></image> -->
-                            <!-- <text class="section_details">{{name}}</text> -->
-                            <text class="section_details">Picture</text>
-                        <!-- </view>         -->
+                <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}"  class="list" > 
                 
-                <view>
-                    <view class="section_title">Trip Decription</view>
-                    <text class="section_details">{{activity.tripDes}}</text>
-                </view>   
-                <view>
-                       <view class="section_title">Trip Type </view>
-                        <view class="section_details">Type :{{activity.tripType}}</view>
-                </view>
-                    <view >
-                        <view class="section_title">Trip  Description </view>
-                        <textarea class="section_details">{{activity.tripDetail}}</textarea>
-                    </view>       
-        </view>
+                </scroll-view>
 
-                <view>
-                        <view class="section_title">Contact information</view>
-                        <view class="section_details" >Name:{{name}}</view>
-                </view>
-                <view class="section_title">
-                    Location Details DETAILS
-                </view>
-        </view>
-
-<!-- Button Register -->
-
-            <view clas="page_bottom">       
-                <view><button class="share-btn ">Share</button></view>
-                <view><button classs="register-btn" bindtap="register">Register</button></view>
+                <view class="tripStartDate"> 
+                    <view class="group">
+                        <block wx:for="{{iconColor}}">
+                            <icon type="waiting" size="20" color="{{item}}"/>
+                        </block>
+                
+                {{activity.tripStartDate}} </view> 
             </view>
-</view> 
-<!-- </view> -->
+                <view class="tripDes"> 📍{{activity.tripDes}}</view>   
+                
+               
+        
+                <view class="attendees"> 
+
+                <view style="padding: 10rpx">ATTENDEES</view>
+
+                <view style="padding: 8rpx">35/40 Attendees*</view>
+
+                <progress percent="80" color="#219EBC" active />
+
+                 <image class="avatar" src="https://media.ifanrusercontent.com/tavatar/0e/e2/0ee2ac1145d9d5d33adb27b9a12e2fcbf9918367.jpg"></image>
+                 
+            
+                </view>
+
+                <view class="tripInfo">
+                  <view class="tripDescription"> TRIP DESCRIPTION </view> 
+                <view>{{activity.tripDetail}}</view>
+            </view>
+         
+
+                <view class="contactInfo">
+                        <view class="contact">CONTACT INFORMATION</view>
+                        <view>Name:{{name}}</view>
+                </view>
+               
+        </view>
+        <view class="buttons" style="">
+      <button class="share-btn"> Share</button>
+      <button bindtap="register" class="register-btn"> Register</button>
+   </view>
+
+        </view>
+

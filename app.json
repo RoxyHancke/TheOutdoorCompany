@@ -20,6 +20,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Outdoor Lovers",
     "navigationBarTextStyle": "black"
+  
   },
   "tabBar": {
     "backgroundColor": "#FFF",
@@ -29,12 +30,6 @@
         "text": "Home",
         "iconPath": "/pages/home.png",
         "selectedIconPath": "/pages/home.png"
-      },
-      {
-        "pagePath": "pages/create/create",
-        "text": "Create",
-        "iconPath": "/pages/create.png",
-        "selectedIconPath": "/pages/create.png"
       },
       {
         "pagePath": "pages/profile/profile",

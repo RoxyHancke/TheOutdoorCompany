@@ -1,163 +1,161 @@
 /* pages/details/details.wxss */
+
+.container {
+  padding-bottom: 3.2em;
+}
+
+.swiper {
+  height:400rpx;
+  width: 750rpx;
+  /* position: relative; */
+}
+/* 
+.slide-image {
+position: relative;
+} */
+
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.userinfo-avatar {
+
+
+.avatar {
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
+  position: relative;
 }
-.avatar_section{
-margin-top:85rpx;
- padding: 30rpx;
-}
+
 .page__title{
 margin-top: 30rpx;
 padding: 20rpx;
 display: block;
 }
-.title {
-  font-size: medium;
-  font-weight: bold;
-  color: #219EBC;
-  text-transform: uppercase;
-}
-.article_section{
-  display:"flex";
-  flex-direction: row;
-  margin:5px;
-  padding:0 10px;
-  text-align:left;
-  background-color:lightgray;
-  height:2.3em;line-height:2.3em;
 
+
+.tripTitle {
+  /* box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  height: 120rpx;
+  margin: 0 auto;
+  padding: 15rpx; */
+  font-size: larger;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  background-color: black;
+  
+}
+
+.tripStartDate{
+    box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center; 
+    justify-content: start;
+    height: 80rpx;
+    margin: 0 auto;
+    padding: 20rpx;
+    font-weight: bold;
+  font-size: small;
+    
 }
 .tripDes {
-  font-size: small;
-  font-weight: normal;
-  color: #023047;
-  text-transform: capitalize;
-}
-input{
-  padding: 10px 15px;
-  background-color: #fff;
-}
-checkbox, radio{
-  margin-right: 5px;
-}
-
-.btn-area{
-  padding: 0 15px;
-}
-.btn-area button{
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.page {
-  min-height: 100%;
-  flex: 1;
-  background-color: #FBF9FE;
-  font-size: 16px;
-  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-  overflow: hidden;
-}
-.page__hd{
-  padding: 40px;
-}
-.page__title{
-  display: block;
-  font-size: 20px;
-}
-.page__desc{
-  margin-top: 5px;
-  font-size: 14px;
-  color: #888888;
-}
-
-.section{
-  margin-bottom: 40px;
-  display: block;
-}
-.section_gap{
-  padding: 0 15px;
-}
-.section_title{
-  /* margin-bottom: 8px; */
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: medium;
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center; 
+  justify-content: start;
+  height: 80rpx;
+  margin: 0 auto;
+  padding: 20rpx;
   font-weight: bold;
-  color: #219EBC;
-  /* text-transform: uppercase; */
+  font-size: small;
 }
 
-.section_details{
-  /* margin-bottom: 8px; */
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: medium;
-  /* font-weight: bold; */
-  /* color: #219EBC; */
-  /* text-transform: uppercase; */
-}
-
-
-
-
-
-.section_gap .section__title{
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.page-section-spacing{
-  margin-top: 60rpx;
-}
-.scroll-view_H{
-  white-space: nowrap;
-}
-.scroll-view-item{
+.attendees {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  display: block;
+  align-items: center; 
+  justify-content: flex-start;
   height: 300rpx;
+  margin: 0 auto;
+  padding: 20rpx;
+  font-weight: bold;
+  font-size: small;
 }
-.scroll-view-item_H{
-  display: inline-block;
+
+.tripDescription {
+  font-weight: bold;
+  font-size: small;
+  padding: 0 0 15rpx 0;
+ 
+}
+
+.tripInfo {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  align-items: center; 
+  justify-content: start;
+  margin: 0 auto;
+  padding: 20rpx;
+  height: 100%;
+  font-size: small;
+  text-align: start;
+}
+
+.contactInfo {
+  box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+  align-items: center; 
+  justify-content: start;
+  margin: 0 auto;
+  padding: 20rpx;
+  height: 120rpx;
+  font-size: small;
+  text-align: start;
+}
+.contact{
+    font-weight: bold;
+    font-size: small;
+    padding: 0 0 15rpx 0;
+   
+}
+
+
+.buttons {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 300rpx;
+  background-color:white;
 }
+
 .share-btn {
-  color: white;
+  color: rgba(2, 2, 2, 0.815);
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
-  font-weight: bold;
-  background: #8ECAE6;
-  transition:  0.3s ease;
-  width: 150rpx;
+  font-weight: normal;
+  background: rgb(235,235, 235);
+  transition: 0.3s ease;
+  width: 340rpx;
   margin: 0 auto;
-}
-.item{
-  border: solid;
+  font-size: medium;
+  
 }
 
 .register-btn {
   color: white;
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
-  font-weight: bold;
+  font-weight: normal;
   background: #FB8500;
   transition:  0.3s ease;
   width: 100rpx;
   margin: 0 auto;
-}
-.page_bottom {
-    display: flex;
-    align-items: flex-end;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 
+  font-size: medium;
 }
 

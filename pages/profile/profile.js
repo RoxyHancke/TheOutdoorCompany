@@ -4,6 +4,7 @@ Page({
   data: {
     userInfo:[],
     items:{},
+    trips:[]
   },
 
   getUserInfo:function(userInfo){
@@ -15,7 +16,7 @@ Page({
       .find()
       .then(
         (res)=>{
-          console.log("query results",res)
+          console.log("user query results",res)
           this.setData({
             items: res.data.objects[0],
           })
@@ -32,10 +33,25 @@ Page({
       page.setData({
         userInfo: res.data
       });
-    page.getUserInfo(res.data)
+    page.getUserInfo(res.data);
+          //query to get each user's trip
+          const trip = new wx.BaaS.TableObject("TOC_trip");
+          const queryTrip = new wx.BaaS.Query();
+          queryTrip.compare("tripOwner","=",res.data.id);
+          console.log("user id",res.data.id);
+          trip.setQuery(queryTrip)
+          .find()
+          .then(
+          (res)=>{
+            console.log("trip query results",res);
+            page.setData({
+              trips: res.data.objects,
+            })
+          }
+         )
     }
-  })
-  },
+  });
+ },
 
   userInfoHandler: function(data) {
     console.log(data)
@@ -85,10 +101,22 @@ Page({
   }
   )},
 
+  
+
   editProfile: function(e){
     wx.navigateTo({
       url: `/pages/editProfile/editProfile?id=${this.data.items.id}`,
     })
   },
 
-})  
+  toTripDetails: function(e){
+  
+      wx.navigateTo({
+        url: `/pages/details/details?tripId=${e.currentTarget.id}`,
+  
+  
+        })
+
+},
+
+})

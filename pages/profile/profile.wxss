@@ -6,19 +6,165 @@
   align-items: center;
   flex-direction: column;
   padding: 30rpx;
-  border-style: solid;
-  border-color: black;
+ 
 } 
 
-.buttonPinkSmall{
-  color:#b5838b;
-  border:2px solid #b5838b;
+.login_button {
+  position: relative;
+  width: 80%;
+  color: white;
+  padding: 5rpx 5rpx;
+  border-radius: 5rpx;
+  font-weight: bold;
+  transition: 0.3s ease;
+  margin: 0 auto;
+  background-color: #219EBC;
+}
+
+.buttonOrangeSmall{
+  color: white;
+  font-weight: bold;
+  background-color: #FB8500;
   max-width:100%;
-  font-size:10px;
+  font-size:small;
+  margin: 10rpx;
+}
+
+.name {
+  font-weight: bold;
+  font-size: medium;
+  text-transform: capitalize;
+  color:#023047;
+}
+
+.interest {
+  font-weight: normal;
+  font-size: small;
+  text-transform: capitalize;
+  color:#023047;
+  padding: 10rpx;
 }
 
 .avatar {
-  width: 100rpx;
-  height: 100rpx;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
   border-radius: 50%;
+  position: relative;
+  border: 5rpx solid white;
 }
+
+
+/* .drop-down-card {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #023047;
+} */
+
+.big-card {
+  justify-content: center;
+  align-items: center;
+  color: #023047;
+  border: 2px solid rgba(248,248,248,0.03);
+
+}
+
+.bio_box {
+  justify-content: center;
+  align-items: center;
+  color: #023047;
+  border: 2px solid rgba(248,248,248,0.03);
+}
+
+.bio {
+  font-weight: normal;
+  font-size: small;
+  color: #023047;
+  text-transform: lowercase;
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  margin: 10rpx 0 10rpx;
+  background-color: white;
+  padding: 8rpx;
+}
+
+
+.card-product{
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  height: 300rpx;
+  margin: 10rpx 0 10rpx;
+  background-color: white;
+} 
+
+.myTrips {
+  font-weight: bold;
+  font-size: small;
+  padding: 15rpx 0 0 0;
+  text-transform: uppercase;
+ 
+}
+
+.myBio {
+  font-weight: bold;
+  font-size: small;
+  padding: 15rpx 0 0 0;
+  text-transform: uppercase;
+
+}
+.picture {
+  height: 300rpx;
+  width: 300rpx
+}
+
+.card-product-infos {
+  padding: 0 0 15rpx 15rpx; 
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  height: 200rpx;
+  width: 400rpx;
+}
+
+.title {
+  font-size: small;
+  font-weight: bold;
+  color: #219EBC;
+  text-transform: uppercase;
+}
+
+.tripDes {
+  font-size: small;
+  font-weight: normal;
+  color: #FB8500;
+  text-transform: capitalize;
+}
+
+.tripType {
+  font-size: x-small;
+  font-weight: normal;
+  color: #023047;
+  text-transform: capitalize;
+}
+
+.tripStart {
+  font-size: x-small;
+  font-weight: lighter;
+  color: #023047;
+  text-transform: capitalize;
+}
+
+
+.container {
+  height: 100%;
+  font-family: Lato;
+  background-color: rgb(245, 245, 245);
+  padding: 9rpx;
+} 
+
+
+  

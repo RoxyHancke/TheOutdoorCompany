@@ -8,7 +8,7 @@ Page({
       image:"",
   },
   ],
-    details:[],
+    items:[],
     comments:[{comment:""}],
     scrollInto: "",
     inputVal: "",
@@ -31,6 +31,7 @@ onLoad: function () {
               });
               console.log("detail page result", res);
 
+
             }, (error) => {
               console.log("error", error);
             }
@@ -49,4 +50,4 @@ toNavigate: function () {
     url: 'pages/details/details',
   })
   },
-})
+
