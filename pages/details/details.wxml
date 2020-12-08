@@ -32,31 +32,49 @@
                 <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}" style="height: 100rpx" class="list">
                 </scroll-view>
                 <view class="article_section">
-                    {{activity.tripStartDate}}
-                    <textarea class="article_section">{{activity.tripDes}}</textarea>
+                    {{trip.tripStartDate}}
+                    <text class="section_title">📍 {{activity.tripDes}}</text>
                 </view>
-                <view class="avatar_section">
-                    <image class="avatar" src="{{image}}"></image>
-                    <text>{{name}}</text>
-                    <view>TRIP DESCRIPTON
-                    <text>{{activity.tripDes}}</text>
-                    </view>
+                <view class="section_title"><text>Active Leaders</text></view>
+                        <!-- <view class="avatar_section">   -->
+                            <image class="userinfo-avatar" src="{{image}}"></image>
+                            <text class="section_details">{{name}}</text>
+                        <!-- </view>         -->
+                <view class="section_title"><text>Attendees</text></view>
+                        <!-- <view class="avatar_section">   -->
+                            <!-- <image class="userinfo-avatar" src="{{image}}"></image> -->
+                            <!-- <text class="section_details">{{name}}</text> -->
+                            <text class="section_details">Picture</text>
+                        <!-- </view>         -->
+                
+                <view>
+                    <view class="section_title">Trip Decription</view>
+                    <text class="section_details">{{activity.tripDes}}</text>
+                </view>   
+                <view>
+                       <view class="section_title">Trip Type </view>
+                        <view class="section_details">Type :{{activity.tripType}}</view>
                 </view>
-                <textarea class="article">{{activity.tripDetail}}</textarea>
-                </view>
+                    <view >
+                        <view class="section_title">Trip  Description </view>
+                        <textarea class="section_details">{{activity.tripDetail}}</textarea>
+                    </view>       
+        </view>
 
                 <view>
-                        <view>CONTACT INFORMATION</view>
-                        <view>Name: {{activity.tripOwner.id}}</view>
+                        <view class="section_title">Contact information</view>
+                        <view class="section_details" >Name:{{name}}</view>
                 </view>
-                <view>
-                    LOCATION DETAILS
+                <view class="section_title">
+                    Location Details DETAILS
                 </view>
         </view>
-            <view clas="page_bottom">       
-                <button class="share-btn ">Share</button>
-                <button classs="">Register</button>
 
+<!-- Button Register -->
+
+            <view clas="page_bottom">       
+                <view><button class="share-btn ">Share</button></view>
+                <view><button classs="register-btn" bindtap="register">Register</button></view>
             </view>
 </view> 
 <!-- </view> -->

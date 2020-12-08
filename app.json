@@ -6,6 +6,7 @@
     "pages/profile/profile",
     "pages/create/create",
     "pages/index/index",
+    "pages/aboutUs/aboutUs",
     "pages/editProfile/editProfile"
   ],
   "plugins": {

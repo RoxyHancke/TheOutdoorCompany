@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -20,77 +19,28 @@ margin-top: 30rpx;
 padding: 20rpx;
 display: block;
 }
-.page__desc{
-
-}
-.page__bd{
-
-}
-.article{
-
-}
-.article__h1{
-
+.title {
+  font-size: medium;
+  font-weight: bold;
+  color: #219EBC;
+  text-transform: uppercase;
 }
 .article_section{
   display:"flex";
   flex-direction: row;
   margin:5px;
   padding:0 10px;
-  text-align:center;
+  text-align:left;
   background-color:lightgray;
   height:2.3em;line-height:2.3em;
-  
-}
-.article__h3{
 
 }
-.article__p{
-
+.tripDes {
+  font-size: small;
+  font-weight: normal;
+  color: #023047;
+  text-transform: capitalize;
 }
-.article__img{
-
-}
-.green{
-  color: #09BB07;
-}
-.red{
-  color: #F76260;
-}
-.blue{
-  color: #10AEFF;
-}
-.yellow{
-  color: #FFBE00;
-}
-.gray{
-  color: #C9C9C9;
-}
-
-.strong{
-  font-weight: bold;
-}
-
-.bc_green{
-  background-color: #09BB07;
-}
-.bc_red{
-  background-color: #F76260;
-}
-.bc_blue{
-  background-color: #10AEFF;
-}
-.bc_yellow{
-  background-color: #FFBE00;
-}
-.bc_gray{
-  background-color: #C9C9C9;
-}
-
-.tc{
-  text-align: center;
-}
-
 input{
   padding: 10px 15px;
   background-color: #fff;
@@ -135,17 +85,33 @@ checkbox, radio{
 .section_gap{
   padding: 0 15px;
 }
-.section__title{
-  margin-bottom: 8px;
+.section_title{
+  /* margin-bottom: 8px; */
   padding-left: 15px;
   padding-right: 15px;
+  font-size: medium;
+  font-weight: bold;
+  color: #219EBC;
+  /* text-transform: uppercase; */
 }
+
+.section_details{
+  /* margin-bottom: 8px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: medium;
+  /* font-weight: bold; */
+  /* color: #219EBC; */
+  /* text-transform: uppercase; */
+}
+
+
+
+
+
 .section_gap .section__title{
   padding-left: 0;
   padding-right: 0;
-}
-.section__ctn{
-
 }
 
 .page-section-spacing{
@@ -169,7 +135,7 @@ checkbox, radio{
   font-weight: bold;
   background: #8ECAE6;
   transition:  0.3s ease;
-  width: 340rpx;
+  width: 150rpx;
   margin: 0 auto;
 }
 .item{
@@ -183,11 +149,15 @@ checkbox, radio{
   font-weight: bold;
   background: #FB8500;
   transition:  0.3s ease;
-  width: 340rpx;
+  width: 100rpx;
   margin: 0 auto;
 }
 .page_bottom {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 80rpx;
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }
+

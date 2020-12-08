@@ -2,17 +2,21 @@
 const app = getApp();
 const img = '../image/location.png'
 import moment from 'moment';
-
 Page({
   data: {
-          userInfo:[{
-            id:"",
-            name:"",
-            image:"",
-        },
-        ],
-        activity: {},
-        trips:{},
+          usergetInfo:[{
+          name:"",
+          image:""
+          }],
+          activity: {},
+          trip:{
+           t_tripStartDate:"",
+          },
+          owner:"",
+          attendees:[{
+            at_name:"",
+            at_picture:"",
+          }],
           comments:[{comment:""}],
           scrollInto: "",
           inputVal: "",
@@ -22,74 +26,110 @@ Page({
           autoplay: false,
           interval: 5000,
           duration: 1000,
-
-          usergetInfo: [{
-            id:"",
-            image:'',
-
-          }],
           options_id:"",
-          pictures: []
+          pictures: [],
+          tripID:""
         },
-        onShareAppMessage() {
+   onShareAppMessage() {
           return {
             title: 'swiper',
             path: 'page/component/pages/swiper/swiper'
           }
         },
         
-  onLoad: function (options) {
+    onLoad: function(options)
+    {
+      const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
+      const Activities = new wx.BaaS.TableObject("TOC_trip");
+            Activities.get(options.id).then((res) => {
+             this.setData({
+                  activity: res.data,
+                  OwnerForTrip : res.data.tripOwner,
+                  attendees:res.data.objects,
+                  // trips :res.data.objects[0],
+             });     
+                  // const OwnerForTrip = activity.tripOwner;
+                  const Owner= res.data;
+                  const OwnerForTrip = Owner.tripOwner;
+                  const ownerId=OwnerForTrip.id;
+                  console.log("tripowner", OwnerForTrip.id);
+                  console.log("ownerID", ownerId);
+// ****
+                  const Query = new wx.BaaS.Query()
+                  console.log(Query);
+                  Query.compare("userID", "=", OwnerForTrip.id);
+                  UsergetInfo.setQuery(Query)
+                        .find()
+                              .then((res) => {
+                                // console.log("orders return", res);
+                                this.setData({
+                                  usergetInfo: res.data,
+                                  name:res.data.objects[0].nickName,
+                                  image:res.data.objects[0].profilePicture,
+                                });
+                              });
+                                                        // const that=this;
+                                                    //  const trip = res.data.objects[0];
+                                                          //  const remappedTrips = trips.map((trip) => {
+                                                          //  return {
+                                                          //      ...trip,
+                                                      //  trip.StartDate= moment(trip.tripStartDate).format('DD/MM/YYYY');
+                                                              //  console.log(tripStartDate);
+                                                          //  };
+                                                          //  });
+
+          
+           },
+              // console.log("aaaaah", OwnerForTrip,res),
+              //
+              (error) => {
+                  console.log("error", error);
+                });
+         
+         
+        //  UsergetInfo.get(this.OwnerForTrip).then((res) => {
+        //   this.setData({
+        //    usergetInfo: res.data
+        //   }); 
+        //   console.log(res);
+        //    name:usergetInfo.nickName;
+        //  }); 
+        //  const pictures = [];
+        const partipicants = res.data.objects[0];
+         const attendees_UserID = [];
+        //          for (let i = 0; i < partipicant.length; i++) {
+        //              const participantForOneTrip = partipicants[i].participant;
+        //              patrtipicants.push(...participantForOneTrip);
+        //          };
+        //      // })
+        //          console.log('ppp',patrtipicants)     
+        //          this.setData({
+        //             //  activity: remappedTrips,
+        //              partipicants: partipicants
+        //          });
+     
+          
+                
+    },
+                  
+           
+        
+           // console.log("hohohoho",this.owner);
+          
+             
+                        // let query = new wx.BaaS.Query();
+                        // query.compare("userId", "=", options.id);
+                         // // grab the information from movie_reviews table
+                         // UsergetInfo.setQuery(query)
+                         //   .find()
+                         //   .then((res) => {
+                         //     // console.log("result from movie reviews query find", res);
+                         //     this.setData({
+                         //       items: res.data.objects,
+                         //     });
+                         //     });
+         
    
-    const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
-    const Activities = new wx.BaaS.TableObject("TOC_trip");
-  
-    // const comment_storyId="5fbd042933015444fc5031e8"
-    console.log("detail page options", options);
-    // console.log(this.data.options.id)
-                // UsergetInfo.expand(['userID']).get(options.tripId).then((res) => {
-                //   console.log("halaluya", res );
-                //   this.setData({
-                //     userInfo: res.data
-                //   });    
-
-                // });
-              // UsergetInfo.expand(['userID']).get(options.tripId).then((res) => {
-  
-              //     this.setData({ 
-              //       image:res.data.profilePicture,
-              //       name:res.data.nickName,
-              //     });
-              // });
-
-              Activities.expand(['tripOwner']).get(options.tripId).then((res) => {
-                      console.log("halaluya", res );
-                      this.setData({
-                        activity: res.data
-                      });
-            });
-                  const trips = res.data.objects;
-                  const pictures = [];
-                  for(let i = 0; i < trips.length; i++) {
-                    const picturesForOneTrip = trips[i].picture;
-                    pictures.push(...picturesForOneTrip);
-                  }
-            
-                  console.log("hayirdir insallah ",res);
-                  const remappedTrips = trips.map((trip) => {
-                    return {
-                      ...trip,
-                      tripStartDate: moment(trip.tripStartDate).format('DD/MM/YYYY')
-                    }
-                  })
-                  console.log('ppp', pictures);
-                  this.setData({
-                        activity: remappedTrips,
-                        pictures: pictures
-                  }); 
-                  console.log(that.t_picture) 
-                  console.log(res);
-              }, 
-      
     
         changeIndicatorDots() {
           this.setData({
@@ -113,6 +153,41 @@ Page({
           this.setData({
             duration: e.detail.value
           })
-        }
+        },
+        /////////Register
+        register: function () {
+          wx.showModal({
+            title: "Register?",
+            content: `Are you sure you want to register this trip? `,
+            showCancel: true,
+            cancelText: "Cancel",
+            cancelColor: "#000000",
+            confirmText: "Register",
+            confirmColor: "#3CC51F",
+            success: (result) => {
+              // if (result.confirm) {
+              //   const Movies = new wx.BaaS.TableObject("movies");
+      
+              //   const newMovie = Movies.create();
+      
+              //   newMovie.set({
+              //     title: val,
+              //   });
+      
+              //   newMovie.save().then((res) => {
+              //     const newItems = this.data.items;
+      
+              //     newItems.push(res.data);
+      
+              //     this.setData({
+              //       items: newItems,
+              //     });
+              //   });
+              // }
+            },
+            fail: () => {},
+            complete: () => {},
+          });
   
+        },
 })
