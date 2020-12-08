@@ -45,8 +45,10 @@ onLoad: function () {
                  });
 
               this.setData({
+
                 // items:res.data.objects,
                   items:remappedTrips,
+
               });
               console.log("detail page result", res);
             }, (error) => {

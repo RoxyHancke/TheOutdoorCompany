@@ -7,7 +7,8 @@ Page({
      tripType:"",
      tripStartDate:"",
      tripEndDate:"",
-     costEst:""
+     costEst:"",
+     dummyPictureArray:['https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0ze3tv8W9Gq.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0XQdGFxpJrN.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr095ZjYYdVjZ.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0dJgiFj2XcU.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0tlK2kRCadW.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0xQcZxMTNUi.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0JVRwMqlnj8.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0a9L9TRKt8f.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0JZ4BdawrZo.jpg','https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kmcr0cnmV8iaEYd.jpg']
   },
   onShow: function () {
     const page = this
@@ -125,8 +126,10 @@ chooseImage: function(e){
   })
 },
 
+
  //submit the form
  formSubmit: function(e){
+   console.log("dummy picture",this.data.dummyPictureArray[Math.floor(Math.random()*this.data.dummyPictureArray.length)])
   console.log("formsubmit",e);
   const page = this;
   //the detail is stored under detail.value
@@ -147,7 +150,7 @@ chooseImage: function(e){
     title:e.detail.value.title,
     tripDetail:e.detail.value.tripDetail,
     costEst:this.data.costEst,
-    picture:[this.data.imageURL]
+    picture:[this.data.dummyPictureArray[Math.floor(Math.random()*this.data.dummyPictureArray.length)]]
     });
     newTrip.save().then(res => {
       console.log("set the data to ifanr",res)
