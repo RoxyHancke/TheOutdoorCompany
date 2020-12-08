@@ -3,7 +3,7 @@
 <view class="container">
 
    <view class="drop-down-card" style="border-width: thin; box-shadow: 0 0 15rpx rgba(0,0,0,0.2)">
-      <view class="trip" style="border-right: solid; border-width: thin; " >Trip Type</view>
+      <picker bindchange="tripTyperPicker" value="{{index}}" range="{{tripTypeOptions}}" class="trip" style="border-right: solid; border-width: thin; ">Trip Type</picker>
       <view class="month" >Month</view>
    </view>
    <view class="big-card" >

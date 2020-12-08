@@ -6,7 +6,8 @@
     "pages/profile/profile",
     "pages/create/create",
     "pages/index/index",
-    "pages/editProfile/editProfile"
+    "pages/editProfile/editProfile",
+    "pages/picker/picker"
   ],
   "plugins": {
     "sdkPlugin": {
