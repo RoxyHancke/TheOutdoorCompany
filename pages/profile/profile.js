@@ -1,10 +1,13 @@
 const app=getApp();
-
+import moment from 'moment';
 Page({
   data: {
     userInfo:[],
     items:{},
-    trips:[]
+    trips:[],
+    trip:{
+      tripStartDate:"",
+     },
   },
 
   getUserInfo:function(userInfo){
@@ -16,6 +19,8 @@ Page({
       .find()
       .then(
         (res)=>{
+          
+
           console.log("user query results",res)
           this.setData({
             items: res.data.objects[0],
@@ -43,9 +48,18 @@ Page({
           .find()
           .then(
           (res)=>{
+// ******* Formatting Date
+          const trips = res.data.objects;
+          const remappedTrips = trips.map((trip) => {
+           return {
+               ...trip,
+              tripStartDate: moment(trip.tripStartDate).format('DD/MM/YYYY'),
+              //  console.log(tripStartDate);
+           };
+           });
             console.log("trip query results",res);
             page.setData({
-              trips: res.data.objects,
+              trips: remappedTrips,
             })
           }
          )

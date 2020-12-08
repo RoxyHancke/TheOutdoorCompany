@@ -9,7 +9,7 @@ Page({
           }],
           activity: {},
           trip:{
-           t_tripStartDate:"",
+           tripStartDate:"",
           },
           owner:"",
           attendees:[{
@@ -41,8 +41,12 @@ Page({
       const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
       const Activities = new wx.BaaS.TableObject("TOC_trip");
             Activities.get(options.id).then((res) => {
+              const formattedActivity = {
+                ...res.data,
+                tripStartDate: moment(res.data.tripStartDate).format("DD/MM/YYYY")
+              }
              this.setData({
-                  activity: res.data,
+                  activity: formattedActivity,
                   OwnerForTrip : res.data.tripOwner,
                   attendees:res.data.objects,
                   // trips :res.data.objects[0],
@@ -94,8 +98,8 @@ Page({
         //    name:usergetInfo.nickName;
         //  }); 
         //  const pictures = [];
-        const partipicants = res.data.objects[0];
-         const attendees_UserID = [];
+        // const partipicants = res.data.objects[0];
+        //  const attendees_UserID = [];
         //          for (let i = 0; i < partipicant.length; i++) {
         //              const participantForOneTrip = partipicants[i].participant;
         //              patrtipicants.push(...participantForOneTrip);
@@ -111,27 +115,6 @@ Page({
                 
     },
                   
-           
-        
-           // console.log("hohohoho",this.owner);
-          
-             
-                        // let query = new wx.BaaS.Query();
-                        // query.compare("userId", "=", options.id);
-                         // // grab the information from movie_reviews table
-                         // UsergetInfo.setQuery(query)
-                         //   .find()
-                         //   .then((res) => {
-                         //     // console.log("result from movie reviews query find", res);
-                         //     this.setData({
-                         //       items: res.data.objects,
-                         //     });
-                         //     });
-         
-   
-    
-
-
     changeIndicatorDots() {
         this.setData({
             indicatorDots: !this.data.indicatorDots

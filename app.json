@@ -8,8 +8,7 @@
     "pages/index/index",
     "pages/editProfile/editProfile",
     "pages/picker/picker",
-    "pages/aboutUs/aboutUs",
-    "pages/editProfile/editProfile"
+    "pages/aboutUs/aboutUs"
   ],
   "plugins": {
     "sdkPlugin": {
