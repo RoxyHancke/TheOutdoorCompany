@@ -1,24 +1,33 @@
 <!--pages/editProfile/editProfile.wxml-->
+
+<view class="container">
+
 <view>
-  <text>Edit your profile here!</text>
+  <text style="color:#023047; font-size:medium">Edit your profile here!</text>
 </view>
 
 <view>
   <form bindsubmit="formSubmit">
-    <text>Interest 1:</text>
-    <picker bindchange="bindPickerInterest1" value="{{index}}" range="{{tripTypeOptions}}">
-                     <a class="weui-btn weui-btn_default">Interest 1</a> 
+    <view class="interest">
+    <!-- <text >Interest 1:</text> -->
+    <picker class="IP" bindchange="bindPickerInterest1" value="{{index}}" range="{{tripTypeOptions}}">
+                     <a class="weui-btn weui-btn_default" >Interest 1</a> 
                     </picker>
-    <text>Interest 2:</text>
+    <!-- <text>Interest 2:</text> -->
     <picker bindchange="bindPickerInterest2" value="{{index}}" range="{{tripTypeOptions}}">
                      <a class="weui-btn weui-btn_default">Interest 2</a> 
                     </picker>
-    <text>Interest 3:</text>
+    <!-- <text>Interest 3:</text> -->
     <picker bindchange="bindPickerInterest3" value="{{index}}" range="{{tripTypeOptions}}">
                      <a class="weui-btn weui-btn_default">Interest 3</a> 
                     </picker>
-    <text>Tell us more about you:</text>
+
+                  </view>
+    <text class="bio_box">Tell us more about you:</text>
+    <view class="bio">
     <input name="shortBio" type="text" placeholder="bio"></input>
+  </view>
     <button class="button" form-type="submit" bindtap="goBackToProfile">Submit</button>
   </form>
+</view>
 </view>
