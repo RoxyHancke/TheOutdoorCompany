@@ -85,24 +85,14 @@
           "query": "",
           "scene": null
         },
-        {
-          "name": "pages/Inform/AboutUs",
-          "pathName": "pages/Inform/AboutUs",
-          "query": "",
-          "scene": null
-        },
+      
         {
           "name": "pages/details/details",
           "pathName": "pages/details/details",
           "query": "",
           "scene": null
         },
-        {
-          "name": "pages/Inform/AboutUs",
-          "pathName": "pages/Inform/AboutUs",
-          "query": "",
-          "scene": null
-        },
+      
         {
           "name": "pages/aboutUs/aboutUs",
           "pathName": "pages/aboutUs/aboutUs",
