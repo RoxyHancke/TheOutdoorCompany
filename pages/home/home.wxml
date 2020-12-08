@@ -6,6 +6,7 @@
       <picker bindchange="tripTyperPicker" value="{{index}}" range="{{tripTypeOptions}}" class="trip" style="border-right: solid; border-width: thin; ">Trip Type</picker>
       <view class="month" >Month</view>
    </view>
+
    <view class="big-card" >
 
       <view bindtap="toTripDetails" wx:for="{{items}}" id="{{item.id}}" wx:key="id">

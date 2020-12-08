@@ -1,17 +1,58 @@
 /* pages/editProfile/editProfile.wxss */
 
+.container {
+  height: 100%;
+  font-family: Lato;
+  background-color: rgb(245, 245, 245);
+  padding: 9rpx;
+}
+.interest {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.weui-btn_default {
+/* padding: 15rpx; */
+margin: 20rpx;
+font-size: medium;
+color: #FB8500;
+background-color: white;
+box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+}
+
 .button {
   align-items: center;
   position: relative;
   width: 100%;
-  background-color:#FB8500;
+  background-color:#219EBC;
   color: white;
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
   font-weight: bold;
   transition: 0.3s ease;
   width: 450rpx;
-  margin: 0 auto;
+  margin: auto;
   font-size: medium;
   
+}
+
+.bio_box {
+  color: #023047;
+
+}
+
+.bio {
+  font-weight: normal;
+  font-size: medium;
+  color: #023047;
+  text-transform: lowercase;
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  display: flex;
+  height: 200rpx;
+  margin: 10rpx 10rpx 100rpx 10rpx;
+  background-color: white;
+  padding: 8rpx;
 }

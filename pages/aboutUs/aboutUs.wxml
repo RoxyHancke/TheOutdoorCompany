@@ -1,0 +1,22 @@
+
+
+<view class="title">About Us</view>
+<image src="/pages/aboutUs/OutdoorLovers.jpg" style="width:100%"> </image>
+<text class="title">Outdoor Lovers </text>
+<view><text>...</text></view>
+<textarea clas="tripDes" name="" id="" cols="30" rows="10">
+  We are a fitness community that thrives on the commitment of each person, providing free and consistent access to quality fitness, wellness and an active lifestyle.
+</textarea>
+<view><text>...</text></view>
+<textarea clas="tripDes" name="" id="" cols="30" rows="10">📍
+We started our journey in Shanghai, China, in 2015, with six friends who just wanted to stay active during the long, cold winter. 
+</textarea>
+<text>...</text>
+<textarea clas="tripDes"name="" id="" cols="30" rows="10">We have grown into a community built on trust, accountability and inclusivity. We seek to empower people to manage their own health and fitness, encouraging confidence in communication and leadership on a personal and professional level.</textarea>
+<view>
+<view><text>...</text></view>
+  
+
+</view>
+
+
