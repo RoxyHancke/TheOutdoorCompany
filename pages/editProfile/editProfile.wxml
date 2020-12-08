@@ -11,15 +11,16 @@
     <view class="interest">
     <!-- <text >Interest 1:</text> -->
     <picker class="IP" bindchange="bindPickerInterest1" value="{{index}}" range="{{tripTypeOptions}}">
-                     <a class="weui-btn weui-btn_default" >Interest 1</a> 
+                     <a class="weui-btn weui-btn_default" >Keyword1: {{interest1}}</a> 
                     </picker>
     <!-- <text>Interest 2:</text> -->
     <picker bindchange="bindPickerInterest2" value="{{index}}" range="{{tripTypeOptions}}">
-                     <a class="weui-btn weui-btn_default">Interest 2</a> 
+                     <a class="weui-btn weui-btn_default">Keyword2: {{interest2}}</a> 
                     </picker>
     <!-- <text>Interest 3:</text> -->
     <picker bindchange="bindPickerInterest3" value="{{index}}" range="{{tripTypeOptions}}">
-                     <a class="weui-btn weui-btn_default">Interest 3</a> 
+                     <a class="weui-btn weui-btn_default">Keyword3: {{interest3}}</a> 
+                     
                     </picker>
 
                   </view>

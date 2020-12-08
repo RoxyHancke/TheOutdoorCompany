@@ -28,7 +28,7 @@ onLoad: function () {
 
             Details.find().then((res) => {
               this.setData({
-                details:res.data.objects,
+                items:res.data.objects,
               });
               console.log("detail page result", res);
 
