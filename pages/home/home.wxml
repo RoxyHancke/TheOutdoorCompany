@@ -8,12 +8,9 @@
    </view>
 
    <view class="big-card" >
-
       <view bindtap="toTripDetails" wx:for="{{items}}" id="{{item.id}}" wx:key="id">
          <view class="card-product">
             <image class="picture" src="{{item.picture[0]}}" mode="scaleToFill" ></image>
-            
-
             <view class="card-product-infos">
                <view class="title"> {{item.title}} </view>
                <view class="tripDes">{{item.tripDes}} </view>
