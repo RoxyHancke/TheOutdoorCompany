@@ -7,12 +7,7 @@
 .swiper {
   height:400rpx;
   width: 750rpx;
-  /* position: relative; */
 }
-/* 
-.slide-image {
-position: relative;
-} */
 
 .userinfo {
   display: flex;
@@ -139,7 +134,6 @@ display: block;
   border-radius: 5rpx;
   font-weight: normal;
   background: rgb(235,235, 235);
-  transition: 0.3s ease;
   width: 340rpx;
   margin: 0 auto;
   font-size: medium;

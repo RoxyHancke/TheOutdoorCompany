@@ -11,6 +11,7 @@ Page({
   },
 
   getUserInfo:function(userInfo){
+    console.log('trigger getUserInfo', userInfo)
     const userProfile = new wx.BaaS.TableObject("TOC_userInfo");
     // set up the query
       let query = new wx.BaaS.Query();
@@ -22,8 +23,14 @@ Page({
           
 
           console.log("user query results",res)
+          const originalShortBio = res.data.objects[0].shortBio;
+          const newUser = {
+            ...res.data.objects[0],
+            shortBio: originalShortBio[0].toUpperCase() + originalShortBio.slice(1, originalShortBio.length)
+          };
+          console.log(newUser);
           this.setData({
-            items: res.data.objects[0],
+            items: newUser,
           })
         }
       )

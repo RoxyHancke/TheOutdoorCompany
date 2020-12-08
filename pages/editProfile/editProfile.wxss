@@ -32,7 +32,6 @@ box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
   font-weight: bold;
-  transition: 0.3s ease;
   width: 450rpx;
   margin: auto;
   font-size: medium;

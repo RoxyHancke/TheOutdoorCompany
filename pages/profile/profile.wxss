@@ -81,8 +81,7 @@
 .bio {
   font-weight: normal;
   font-size: small;
-  color: #023047;
-  text-transform: lowercase;
+  color: #023047; 
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
