@@ -24,28 +24,23 @@
   position: relative;
 }
 
-.page__title{
-margin-top: 30rpx;
-padding: 20rpx;
-display: block;
-}
 
-
-.tripTitle {
-  /* box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
+.background-image {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
   display: flex;
-  align-items: center; 
-  justify-content: center;
-  height: 120rpx;
-  margin: 0 auto;
-  padding: 15rpx; */
-  font-size: larger;
+  align-items: flex-end;
   color: white;
-  font-weight: bolder;
-  position: absolute;
-  background-color: black;
-  
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20rpx;
+  position: relative;
+  position: bottom;
 }
+
 
 .tripStartDate{
     box-shadow: 0 0 2rpx rgba(0,0,0,0.2);
@@ -146,10 +141,9 @@ display: block;
   border-radius: 5rpx;
   font-weight: normal;
   background: #FB8500;
-  transition:  0.3s ease;
-  width: 100rpx;
+  width: 340rpx;
   margin: 0 auto;
-
   font-size: medium;
+
 }
 
