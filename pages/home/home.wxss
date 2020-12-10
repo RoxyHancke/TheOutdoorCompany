@@ -10,14 +10,22 @@
   
 }
 
-.trip {
-  font-weight: bold;
+.trip-drop-down {
+  display: flex;
+  border-right: solid; 
+  border-width: thin;
+  align-items: center;
+  justify-content: center;
   width: 340rpx;
   height: 80rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Lato;
+  font-weight: bold;
+} 
+
+.drop-down-image {
+  width: 15rpx;
+  height: 15rpx;
+  margin: 10rpx;
+
 }
 
 .month {
@@ -83,8 +91,21 @@
   font-size: x-small;
   font-weight: lighter;
   color: #023047;
-  text-transform: capitalize;
 }
+
+.costEst {
+  font-size: x-small;
+  font-weight: lighter;
+  color: #023047;
+}
+
+.displayCost {
+  display: flex;
+  font-size: small;
+  font-weight: lighter;
+  color: #023047;
+  }
+
 
 
 .container {
