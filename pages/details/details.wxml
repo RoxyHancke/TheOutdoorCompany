@@ -45,8 +45,10 @@
                 
                🕓 {{activity.tripStartDate}} </view> 
             </view>
+
                 <view class="tripDes"> 📍{{activity.tripDes}}</view> 
-                <view class="tripDes"> 💴{{activity.costEst}}</view>
+                <view class="tripDes"> 💴{{activity.costEst}}</view>     
+       
                 <view class="attendees"> 
 
                 <view style="padding: 10rpx">ATTENDEES</view>
