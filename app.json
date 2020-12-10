@@ -8,7 +8,8 @@
     "pages/index/index",
     "pages/editProfile/editProfile",
     "pages/picker/picker",
-    "pages/aboutUs/aboutUs"
+    "pages/aboutUs/aboutUs",
+    "pages/qr/qr"
   ],
   "plugins": {
     "sdkPlugin": {
@@ -25,6 +26,8 @@
   },
   "tabBar": {
     "backgroundColor": "#FFF",
+    "color": "#023047",
+    "selectedColor": "#219EBC",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -44,7 +47,9 @@
         "iconPath": "/pages/profile.png",
         "selectedIconPath": "/pages/profile.png"
       }
+
     ],
+    
     "style": "v2",
     "sitemapLocation": "sitemap.json"
   },
