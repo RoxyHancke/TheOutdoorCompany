@@ -140,7 +140,13 @@ Page({
                                                         
                                                               
     },
-                  
+    
+    // indicatorDots: true,
+    // autoplay: true,
+    // interval: 5000,
+    // duration: 1000
+    
+
     changeIndicatorDots() {
         this.setData({
             indicatorDots: !this.data.indicatorDots
@@ -182,6 +188,11 @@ register: function () {
                     confirmText: "Register",
                     confirmColor: "#3CC51F",
                     success: (result) => {
+                            if (result.confirm) {
+                              // wx.navigateTo({
+                              //   url: '/pages/qr/qr?id',
+                              // })
+                                 const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
                                   console.log("haaluyarrrrrrr",userInfo.id);
