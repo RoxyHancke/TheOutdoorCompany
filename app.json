@@ -4,11 +4,12 @@
     "pages/login/login",
     "pages/details/details",
     "pages/profile/profile",
-    "pages/create/create",
+    "pages/moreabout/moreabout",
     "pages/index/index",
     "pages/editProfile/editProfile",
     "pages/picker/picker",
-    "pages/aboutUs/aboutUs"
+    "pages/aboutUs/aboutUs",
+    "pages/pickerLocation/pickerLocation"
   ],
   "plugins": {
     "sdkPlugin": {
@@ -31,12 +32,6 @@
         "text": "Home",
         "iconPath": "/pages/home.png",
         "selectedIconPath": "/pages/home.png"
-      },
-      {
-        "pagePath": "pages/create/create",
-        "text": "Create",
-        "iconPath": "/pages/create.png",
-        "selectedIconPath": "/pages/create.png"
       },
       {
         "pagePath": "pages/profile/profile",

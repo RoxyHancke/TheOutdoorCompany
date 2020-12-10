@@ -1,4 +1,4 @@
-/* pages/profile/profile.wxss */
+/* pages/picker/picker.wxss */
 
 .namebox{
   display: flex;
@@ -29,17 +29,6 @@
   font-size:small;
   margin: 10rpx;
 }
-
-.buttonBlueSmall{
-  color: white;
-  font-weight: bold;
-  background-color:#219EBC;
-  max-width:100%;
-  font-size:small;
-  margin: 10rpx;
-}
-
-
 
 .name {
   font-weight: bold;
@@ -92,7 +81,8 @@
 .bio {
   font-weight: normal;
   font-size: small;
-  color: #023047; 
+  color: #023047;
+  text-transform: lowercase;
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   display: flex;
   align-items: center;

@@ -102,8 +102,26 @@ Page({
             }
             page.setData({
               pastTrip: pastTrips,
-              futureTrip: futureTrips
-            })
+              futureTrip: futureTrips,
+            });
+            const futureTripNewTime = page.data.futureTrip.map((trip) => {
+              return {
+                  ...trip,
+                 tripStartDate: moment(trip.tripStartDate).format('YYYY/MM/DD'),
+              };
+              });
+              page.setData({
+                futureTrip: futureTripNewTime,
+              }); 
+              const pastTripNewTime = page.data.pastTrip.map((trip) => {
+                return {
+                    ...trip,
+                   tripStartDate: moment(trip.tripStartDate).format('YYYY/MM/DD'),
+                };
+                });
+                page.setData({
+                  pastTrip: pastTripNewTime,
+                });           
           }
          )
     }
@@ -165,13 +183,16 @@ Page({
       url: `/pages/editProfile/editProfile?id=${this.data.items.id}`,
     })
   },
+  tellUsMore: function(e){
+    wx.navigateTo({
+      url: `/pages/moreabout/moreabout`,
+    })
+  },
 
   toTripDetails: function(e){
-  
+      console.log("tap",e)
       wx.navigateTo({
-        url: `/pages/details/details?tripId=${e.currentTarget.id}`,
-  
-  
+        url: `/pages/details/details?id=${e.currentTarget.id}`
         })
 
 },

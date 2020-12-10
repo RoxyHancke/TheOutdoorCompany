@@ -6,12 +6,12 @@
       <view class="trip-drop-down" >
       <picker bindchange="tripTyperPicker" value="{{index}}" range="{{tripTypeOptions}}" >Trip Type
    <image src="/pages/home/dropdown.png" class="drop-down-image"> </image>
-
 </picker>
 </view>
 <view class="month">
-      <view >Month</view>
+      <picker bindchange="locationPicker" value="{{index}}" range="{{provinceOptions}}" >Location
       <image src="/pages/home/dropdown.png" class="drop-down-image"> </image>
+    </picker>
    </view>
 </view>
 
