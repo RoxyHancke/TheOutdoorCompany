@@ -33,6 +33,12 @@
         "selectedIconPath": "/pages/home.png"
       },
       {
+        "pagePath": "pages/create/create",
+        "text": "Create",
+        "iconPath": "/pages/create.png",
+        "selectedIconPath": "/pages/create.png"
+      },
+      {
         "pagePath": "pages/profile/profile",
         "text": "Profile",
         "iconPath": "/pages/profile.png",
