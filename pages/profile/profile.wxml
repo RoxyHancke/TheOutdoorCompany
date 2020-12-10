@@ -32,8 +32,8 @@
     </view>
 <!-- trips -->
   <view class="big-card">
-    <view class="myTrips">My trips</view>
-    <view bindtap="toTripDetails" wx:for="{{trips}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
+    <view class="myTrips">Upcominng trips</view>
+    <view bindtap="toTripDetails" wx:for="{{futureTrip}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
          <view class="card-product">
             <image mode="scaleToFill" class="picture" src="{{trip.picture[0]}}"></image>
             <view class="card-product-infos">
@@ -45,4 +45,20 @@
          </view>
       </view>
   </view>
+
+  <view class="big-card">
+    <view class="myTrips">Past trips</view>
+    <view bindtap="toTripDetails" wx:for="{{pastTrip}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
+         <view class="card-product">
+            <image mode="scaleToFill" class="picture" src="{{trip.picture[0]}}"></image>
+            <view class="card-product-infos">
+               <view class="title"> {{trip.title}} </view>
+               <view class="tripDes">{{trip.tripDes}} </view>
+               <view class="tripType">{{trip.tripType}} </view>
+               <view class="tripStart">{{trip.tripStartDate}} </view>
+            </view>
+         </view>
+      </view>
+  </view>
+
   </view>
