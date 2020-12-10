@@ -21,8 +21,13 @@
       <view class="interest">
       {{items.interest1}}, {{items.interest2}}, {{items.interest3}}
       </view> 
-      <view>
-        <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
+       <view style="display: flex;justify-content: center;">
+          <view>
+            <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
+          </view>
+          <view>
+            <button class="buttonBlueSmall" bindtap="tellUsMore">Bucket list</button>
+          </view>
       </view>
     </view>
 
