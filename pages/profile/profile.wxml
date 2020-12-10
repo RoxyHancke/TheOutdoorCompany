@@ -3,18 +3,20 @@
 <view class="container">
   <!-- go to log in page if there is no userinfo -->
   <view wx:if="{{!userInfo.id}}">
-    
+    <view class="background-image" style="background-image: url(), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
     <button class="login_button" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Log in to edit profile</button>
+    </view>
+    <image src="/pages/profile/login-image.jpg"  mode="scaleToFill"></image>
   </view>
   <view wx:else>
 <!-- personal info box -->
     <view class="namebox">
       <view>
-      <image class="avatar" src="{{items.profilePicture}}"></image>
+        <image class="avatar" src="{{items.profilePicture}}"></image>
       </view>
 
       <view class="name">
-      <view> {{items.nickName}}</view>
+        <view> {{items.nickName}}</view>
       </view>
       <view class="interest">
       {{items.interest1}}, {{items.interest2}}, {{items.interest3}}
@@ -34,8 +36,8 @@
       <view class="myBio">My bio</view> 
       <view  class="bio"> {{items.shortBio}} </view>
     </view>
-    </view>
 <!-- trips -->
+
   <view class="big-card">
     <view class="myTrips">Upcominng trips</view>
     <view bindtap="toTripDetails" wx:for="{{futureTrip}}" wx:for-item="trip" id="{{trip.id}}" wx:key="id">
@@ -48,8 +50,11 @@
                <view class="tripStart">{{trip.tripStartDate}} </view>
             </view>
          </view>
+
       </view>
+    </view>
   </view>
+
 
   <view class="big-card">
     <view class="myTrips">Past trips</view>
@@ -67,3 +72,4 @@
   </view>
 
   </view>
+

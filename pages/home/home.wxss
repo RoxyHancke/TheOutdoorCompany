@@ -101,9 +101,11 @@
 
 .displayCost {
   display: flex;
+  justify-content: flex-end;
   font-size: small;
   font-weight: lighter;
   color: #023047;
+  padding-top: 20px;
   }
 
 
