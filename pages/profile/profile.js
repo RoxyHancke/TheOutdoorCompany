@@ -73,28 +73,37 @@ Page({
             page.setData({
               trips: remappedTrips,
             });
-            //set up past trips and future trips filter
-            for (var i=0;i<trips.length; i++){
+            //set up past trips and future trips filter;
+            // res.data.objects = trips
+            const pastTrips = [];
+            const futureTrips = [];
+            for (var i=0;i<res.data.objects.length; i++){
               const currentTime = moment().format('DD/MM/YYYY');
-              this.setData({
-                currentTime: currentTime
-              })
               console.log("currentTimme",currentTime);
-              console.log("log user info",this.data.userInfo);
+              console.log("check trip data",res.data.objects);
               //beginningTime.isBefore(endTime)
-              if(date.now(trips[i].tripStartDate) < date.now(currentTime)){
-                const page = this;
-                page.setData({
-                  pastTrip: [trips[i]]
-                });
-                console.log("past trips",pastTrip);
+              //date.now(trips[i].tripStartDate) < date.now(currentTime);
+              console.log("trip time",new Date(res.data.objects[i].tripStartDate).getTime());
+              console.log("current time",new Date().getTime());
+              if(new Date(res.data.objects[i].tripStartDate).getTime() < new Date().getTime()){
+                console.log("check trip data", res.data.objects[i])
+                //  this.setData({
+                //   pastTrip:[res.data.objects[i]]
+                // })
+                pastTrips.push(res.data.objects[i]);
+                console.log("past trips");
               }
                 else {
-                  page.setData({
-                    futureTrip: [trips[i]]
-                  }) 
+                  // this.setData({
+                  //   futureTrip:[res.data.objects[i]]
+                  // })
+                  futureTrips.push(res.data.objects[i]);
                 }
             }
+            page.setData({
+              pastTrip: pastTrips,
+              futureTrip: futureTrips
+            })
           }
          )
     }
