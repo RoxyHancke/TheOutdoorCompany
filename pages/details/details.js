@@ -28,6 +28,10 @@ Page({
           tripID:"",
           avatar:"",
           partTripId:"",
+          participantInfo:"",
+          participants:{},
+          participantForOne:{},
+          partId:"",
         },
    onShareAppMessage() {
           return {
@@ -40,6 +44,8 @@ Page({
     {
       const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
       const Activities = new wx.BaaS.TableObject("TOC_trip");
+      const Attendees = new wx.BaaS.TableObject("TOC_participant");
+      const UserProfile = new wx.BaaS.TableObject("_userProfile");
             Activities.get(options.id).then((res) => {
               const formattedActivity = {
                 ...res.data,
@@ -50,7 +56,49 @@ Page({
                     OwnerForTrip : res.data.tripOwner,
                     // attendees:res.data.objects,
                     // trips :res.data.objects[0],
-              });     
+              });    
+              // ******Burasi
+              const partQuery = new wx.BaaS.Query()
+                  console.log(Query);
+                  partQuery.compare("tripId", "=", options.id);
+                  Attendees.expand(["participantId"]).setQuery(partQuery)
+                        .find()
+                              .then((res) => {
+                                // console.log("orders return", res);
+                                this.setData({
+                                  attendees: res.data.objects,
+                                  // participant:this.data.participantId
+                                  // participants:res.data.objects[0].participantId,
+                                });
+// *****
+                                                        const pictures = [];
+                                                        const partipicants = res.data.objects;
+                                                        console.log('ppp',partipicants) 
+                                                      //  const attendees_UserID = [];
+                                                               for (let i = 0; i < partipicants.length; i++) {
+                                                                   const participantForOneTrip = partipicants[i].participantId.avatar;
+                                                                   pictures.push(participantForOneTrip);
+                                                               };
+                                                           // })
+                                                               console.log('UUU',pictures)     
+                                                               this.setData({
+                                                                   participants: pictures
+                                                               }); 
+
+
+    // *******                            
+                              console.log((res.data.objects));
+                              // const participant= res.data.objects;
+                              
+                              
+                              // const tripId=Owner.id;
+                              // const ownerId=Owner ForTrip.id;
+                              });
+                              const AvatarData=this.attendees;
+                              // const  avatar=this.AvatarData[0].participantid
+                              // console.log("avatar",this.AvatarData);
+              // *******
+            
                   // const OwnerForTrip = activity.tripOwner;
                   const Owner= res.data;
                   const OwnerForTrip = Owner.tripOwner;
@@ -73,6 +121,7 @@ Page({
                                   name:res.data.objects[0].nickName,
                                   image:res.data.objects[0].profilePicture,
                                 });
+                                
                               });
                                                         // const that=this;
                                                     //  const trip = res.data.objects[0];
@@ -87,28 +136,6 @@ Page({
              (error) => {
                   console.log("error", error);
                 });
-         
-         
-                                                      //  UsergetInfo.get(this.OwnerForTrip).then((res) => {
-                                                      //   this.setData({
-                                                      //    usergetInfo: res.data
-                                                      //   }); 
-                                                      //   console.log(res);
-                                                      //    name:usergetInfo.nickName;
-                                                      //  }); 
-                                                      //  const pictures = [];
-                                                      // const partipicants = res.data.objects[0];
-                                                      //  const attendees_UserID = [];
-                                                      //          for (let i = 0; i < partipicant.length; i++) {
-                                                      //              const participantForOneTrip = partipicants[i].participant;
-                                                      //              patrtipicants.push(...participantForOneTrip);
-                                                      //          };
-                                                      //      // })
-                                                      //          console.log('ppp',patrtipicants)     
-                                                      //          this.setData({
-                                
-                                                      //              partipicants: partipicants
-                                                      //          });
                                                   
                                                         
                                                               
@@ -166,79 +193,132 @@ register: function () {
                               //   url: '/pages/qr/qr?id',
                               // })
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
+                            if (result.confirm) {   
+                                 const Participant = new wx.BaaS.TableObject("TOC_participant");
                                   console.log("haaluyarrrrrrr",userInfo.id);
                                   const Query = new wx.BaaS.Query()
                                   console.log(Query);
-                                  Query.compare("userID", "=", userInfo.id);
-                                  UsergetInfo.setQuery(Query)
+                                  Query.compare("tripId", "=", QpartTripId);
+                                  Participant.setQuery(Query)
                                         .find()
                                               .then((res) => {
-                                                // console.log("orders return", res);
-                                                this.setData({
-                                                  avatar:res.data.objects[0].profilePicture,
-                                                });
+                                                console.log("allahim sana geliyorum");
+                                                // this.setData({
+                                                //   avatar:res.data.objects[0].avatar,
+                                                // });
                                               });
-// ******* participant update
-                                                const Participant = new wx.BaaS.TableObject("TOC_participant");
-                                                const partQuery = new wx.BaaS.Query();
-                                                  // *deneme yeni
-                                                  // const Movies = new wx.BaaS.TableObject("movies");
-                                                  // const movie = Movies.getWithoutData(this.data.movie.id);
-                                                  console.log(this.data.activity.id);
-                                                  const participant = Participant.getWithoutData(this.data.userInfo.id);
-                                                  console.log("RRRRR",participant.id);
-                                                  // participant.set({
-                                                  //   participantId: userInfo.id,
-                                                  // });
-                                                  // participant.update().then(
-                                                  //   (res) => {
-                                                  //     console.log("movie save res", res);
-                                                  //     this.setData({
-                                                  //       participant: res.data,
-                                                  //     });
-                                                  //     // STOP SHOWING LOADING
-                                                  //     wx.hideLoading()
-                                                  //   },
-                                                  //   (err) => {
-                                                  //     console.log("movie update err", err);
-                                                  //     // STOP SHOWING LOADING
-                                                  //     wx.hideLoading()
-                                                  //   }
-                                                  // );
-// ****deneme yeni
-
-                                                // console.log(partTripId);
-                                                console.log("AAAAAAAAAAAAAA ",QpartTripId);
-                                                // const QpartTripId=this.partTripId;
-                                                // const parComId=t
-                                                partQuery.compare("tripId", "=",QpartTripId);
-                                                // console.log("id",this.activity.id)
-                                                // Participant.setQuery(partQuery)
-                                                //       .find()
-                                                //             .then((res) => {
-                                                //                   //create a blank entry
-                                                //                   const participantNew = Participant.create();
-                                                //                   // //set the record
-                                                //                   console.log("adim adim",userInfo.id);
-                                                //                   participantNew.set({
-                                                //                           // tripId:res.data.activiy.id,
-                                                //                           update:userInfo.id,
-                                                                          
-                                                //                           });
-                                                //                           participantNew.save().then(
-                                                //                             (res)=>{
-                                                //                               console.log("User profile updated",res);
-                                                //                               (error)=>{
-                                                //                                 console.log("new review save", eroor)}
-                                                //                               }
-                                                //                               )
-                                                //             });
-                                              
+                                              // Try getparticipant 
+                                                      
+                                                     
+                                                      
+                                                   
                                                 
-                              };
-                           
-                    },
-                });
-          };
-        }
-})
+                                                      
+                                                      
+                                                                };
+                                                              },
+                                          
+                                                          });
+                                          
+                                          
+                                          
+                                          
+                                                        };
+                                                      
+                                                      },
+                                                    })
+                                                                    // const partId= res.data.objects[0].id,;
+                                                                    // const OwnerForTrip = Owner.tripOwner;
+                                                                      // const tripId=Owner.id;
+                                                                      // const ownerId=OwnerForTrip.id;
+                                                                      // console.log("tripowner", OwnerForTrip.id);
+                                                                      // console.log("tripID", tripId);
+              
+                                                                    // const participant = Participant.getWithoutData(partId);
+                                                                    // participant.set("participantId",userInfo.id);
+                                                                    // participant.update().then(
+                                                                      
+                                                                    //   (res)=>{
+                                                                        
+                                                                    //     console.log("User profile updated",res);
+                                                                    //   },
+                                                                    //     (error)=>{
+                                                                    //       console.log("new review save", error);
+                                                                    //     }
+                                                                    //   );
+                                           
+                            
+  // register: function(e){
+  //             console.log("formsubmit",e);
+  //             const page = this;
+  //             //the detail is stored under detail.value
+  //             //get the data table
+  //             const Participant = new wx.BaaS.TableObject("TOC_participant");
+  //             const participant = Participant.getWithoutData(this.data.id);
+  //             participant.set("participant",this.data.interest1);
+  
+  //             participant.update().then(
+  //               (res)=>{
+  //                 console.log("User profile updated",res);
+  //                 (error)=>{
+  //                   console.log("new review save", error)}
+  //                 }
+  //                 );
+  //               }
+
+// Check
+  // const participicantPic=this.data.participants;
+                                // ****load picture
+                                  // const pictures = [];
+                                  // const participantForOne=[];
+                                  // const partipicants = res.data.objects[0];
+                                  //  const attendees_UserID = [];
+                                          //  for (let i = 0; i < participicantPic.length; i++) {
+                                          //      participantForOne[i]= participicantPic[i].value;
+                                          //     //  console.log(this.participantForOne[i]);
+                                          //      console.log(participicantPic.length);
+                                                // console.log(Query);
+                                                //                   Query.compare("userID", "=", OwnerForTrip.id);
+                                                //                   UsergetInfo.setQuery(Query)
+                                                //                         .find()
+                                                //                               .then((res) => {
+                                                //                                 // console.log("orders return", res);
+                                                //                                 this.setData({
+                                                //                                   usergetInfo: res.data,
+                                                //                                   name:res.data.objects[0].nickName,
+                                                //                                   image:res.data.objects[0].profilePicture,
+                                                //                                 });
+                                                                                
+                                                //                               });
+                                                                     //  pictures.push(...participantForOneTrip);
+                                          //  };
+                                  //      // })
+                                  //          console.log('ppp',patrtipicants)     
+                                  //          this.setData({
+
+                                  //              partipicants: partipicants
+                                  //          });
+
+     
+         
+         
+                                                      //  UsergetInfo.get(this.OwnerForTrip).then((res) => {
+                                                      //   this.setData({
+                                                      //    usergetInfo: res.data
+                                                      //   }); 
+                                                      //   console.log(res);
+                                                      //    name:usergetInfo.nickName;
+                                                      //  }); 
+                                                      //  const pictures = [];
+                                                      // const partipicants = res.data.objects[0];
+                                                      //  const attendees_UserID = [];
+                                                      //          for (let i = 0; i < partipicant.length; i++) {
+                                                      //              const participantForOneTrip = partipicants[i].participant;
+                                                      //              pictures.push(...participantForOneTrip);
+                                                      //          };
+                                                      //      // })
+                                                      //          console.log('ppp',patrtipicants)     
+                                                      //          this.setData({
+                                
+                                                      //              partipicants: partipicants
+                                                      //          }); 
