@@ -208,21 +208,12 @@ register: function () {
                                                 // });
                                               });
                                               // Try getparticipant 
-                                                      
-                                                     
-                                                      
-                                                   
-                                                
-                                                      
-                                                      
-                                                                };
-                                                              },
+   
+                                                                }}
                                           
-                                                          });
-                                          
-                                          
-                                          
-                                          
+                                                          }
+                                                        });
+
                                                         };
                                                       
                                                       },
