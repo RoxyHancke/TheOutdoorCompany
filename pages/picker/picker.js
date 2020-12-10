@@ -28,7 +28,14 @@ Page({
 
   },
 
-  
+  toTripDetails: function(e){
+    console.log("HALALUYA",e.currentTarget.id)
+      wx.navigateTo({
+        // details?tripOwner=fii23fi09r29038r3r290,
+        url: `/pages/details/details?id=${e.currentTarget.id}`,
+      });
+    },
+    
   onReady: function () {
 
   },
