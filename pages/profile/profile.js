@@ -8,7 +8,12 @@ Page({
     trip:{
       tripStartDate:"",
      },
+    futureTrip:[],
+    pastTrip:[],
+    currentTime:""
   },
+
+  
 
   getUserInfo:function(userInfo){
     console.log('trigger getUserInfo', userInfo)
@@ -67,7 +72,29 @@ Page({
             console.log("trip query results",res);
             page.setData({
               trips: remappedTrips,
-            })
+            });
+            //set up past trips and future trips filter
+            for (var i=0;i<trips.length; i++){
+              const currentTime = moment().format('DD/MM/YYYY');
+              this.setData({
+                currentTime: currentTime
+              })
+              console.log("currentTimme",currentTime);
+              console.log("log user info",this.data.userInfo);
+              //beginningTime.isBefore(endTime)
+              if(date.now(trips[i].tripStartDate) < date.now(currentTime)){
+                const page = this;
+                page.setData({
+                  pastTrip: [trips[i]]
+                });
+                console.log("past trips",pastTrip);
+              }
+                else {
+                  page.setData({
+                    futureTrip: [trips[i]]
+                  }) 
+                }
+            }
           }
          )
     }
