@@ -54,6 +54,7 @@ Page({
               this.setData({
                     activity: formattedActivity,
                     OwnerForTrip : res.data.tripOwner,
+                    max_attendees:res.data.max_attendees,
                     // attendees:res.data.objects,
                     // trips :res.data.objects[0],
               });    
@@ -80,11 +81,13 @@ Page({
                                                                    pictures.push(participantForOneTrip);
                                                                };
                                                            // })
-                                                               console.log('UUU',pictures)     
+                                                               console.log('UUU',partipicants.length)     
                                                                this.setData({
-                                                                   participants: pictures
+                                                                   participants: pictures,
+                                                                   attendees_number:partipicants.length,
                                                                }); 
-
+                                                               const percentage=100*this.data.max_attendees/this.data.attendees_number;
+console.log("percentage," ,percentage);
 
     // *******                            
                               console.log((res.data.objects));
@@ -191,10 +194,52 @@ register: function () {
                                   Participant.setQuery(Query)
                                         .find()
                                               .then((res) => {
-                                                console.log("allahim sana geliyorum");
                                                 // this.setData({
-                                                //   avatar:res.data.objects[0].avatar,
+                                                //   tripParticipant:res.data.objects,
                                                 // });
+                                                const tripParticipant = res.data.objects;
+                                                var k=0;
+                                                console.log("allahim sana geliyorum",res.data.objects);
+                                                for (let i = 0; i < tripParticipant.length; i++) {
+                                                    console.log("ukuku",tripParticipant[i].participantId.id)
+                                                   if (tripParticipant[i].participantId.id==userInfo.id) {
+                                                     console.log("varim");
+                                                     k="true";
+                                                  }else{
+                                                    console.log("yokum");
+                                                    k="false";
+                                                  };
+                                                };
+                                                  console.log("k",k)
+                                                    if(k==="false") {
+                                                      console.log("niye geldim")
+                                                    const NewParticipant = new wx.BaaS.TableObject("TOC_participant");
+                                                    //create a blank entry
+                                                    const newParticipant = NewParticipant.create();
+                                                    //set the record
+                                                          newParticipant.set({
+                                                                tripId:QpartTripId,
+                                                              participantId:userInfo.id,
+                                                          });
+                                                          newParticipant.save().then(
+                                                            (res)=>{
+                                                              console.log("User profile updated",res);
+                                                              (error)=>{
+                                                                console.log("new review save", eroor)}
+                                                              }
+                                                              )
+                                                            }else{
+                                                              wx.showModal({
+                                                                title: 'Information!',
+                                                                content: 'You are alrady in!',
+                                                                showCancel: false,
+                                                                confirmText: 'Cansel',
+                                                                confirmColor: '#3CC51F',
+                                                              });
+                                                            }
+                                                  // pictures.push(participantForOneTrip,userInfo.id));
+                                             
+                                                
                                               });
                                               // Try getparticipant 
                                                       
