@@ -39,7 +39,7 @@ onLoad: function () {
                 const remappedTrips = trips.map((trip) => {
                  return {
                      ...trip,
-                    tripStartDate: moment(trip.tripStartDate).format('DD/MM/YYYY'),
+                    tripStartDate: moment(trip.tripStartDate).format('YYYY/MM/DD'),
                     //  console.log(tripStartDate);
                  };
                  });
