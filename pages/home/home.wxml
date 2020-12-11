@@ -1,17 +1,27 @@
 
-<image src="https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg" style="width:100%"> </image>
+
+
+<image src="https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg" style="width:100%"> 
+   <view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+      <view> Outdoor Lovers</view>
+      <text>Choose your trip</text>
+      </view>
+   <view> Outdoor Lovers</view>
+<text>Choose your trip</text>
+
+</image>
 <view class="container">
 
    <view class="drop-down-card" style="border-width: thin; box-shadow: 0 0 15rpx rgba(0,0,0,0.2)">
       <view class="trip-drop-down" >
       <picker bindchange="tripTyperPicker" value="{{index}}" range="{{tripTypeOptions}}" >Trip Type
    <image src="/pages/home/dropdown.png" class="drop-down-image"> </image>
-
 </picker>
 </view>
 <view class="month">
-      <view >Month</view>
+      <picker bindchange="locationPicker" value="{{index}}" range="{{provinceOptions}}" >Location
       <image src="/pages/home/dropdown.png" class="drop-down-image"> </image>
+    </picker>
    </view>
 </view>
 
@@ -24,7 +34,9 @@
                <view class="tripDes">{{item.tripDes}} </view>
                <view class="tripType">{{item.tripType}} </view>
                <view class="tripStart">{{item.tripStartDate}} </view>
-               <view class="displayCost" style="margin-top:40rpx; margin-left: 340rpx"> {{item.costEst}}</view>
+               <view class="displayCost"> 
+                  <view>¥{{item.costEst}} </view>
+              </view>
             </view>
            
          </view>

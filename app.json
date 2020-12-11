@@ -4,11 +4,13 @@
     "pages/login/login",
     "pages/details/details",
     "pages/profile/profile",
-    "pages/create/create",
+    "pages/moreabout/moreabout",
     "pages/index/index",
     "pages/editProfile/editProfile",
     "pages/picker/picker",
-    "pages/aboutUs/aboutUs"
+    "pages/aboutUs/aboutUs",
+    "pages/pickerLocation/pickerLocation",
+    "pages/qr/qr"
   ],
   "plugins": {
     "sdkPlugin": {
@@ -25,6 +27,8 @@
   },
   "tabBar": {
     "backgroundColor": "#FFF",
+    "color": "#023047",
+    "selectedColor": "#219EBC",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -33,18 +37,14 @@
         "selectedIconPath": "/pages/home.png"
       },
       {
-        "pagePath": "pages/create/create",
-        "text": "Create",
-        "iconPath": "/pages/create.png",
-        "selectedIconPath": "/pages/create.png"
-      },
-      {
         "pagePath": "pages/profile/profile",
         "text": "Profile",
         "iconPath": "/pages/profile.png",
         "selectedIconPath": "/pages/profile.png"
       }
+
     ],
+    
     "style": "v2",
     "sitemapLocation": "sitemap.json"
   },

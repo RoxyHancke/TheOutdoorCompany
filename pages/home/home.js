@@ -22,7 +22,8 @@ Page({
       tripStartDate:"",
      },
     options_id:"",
-    tripTypeOptions:['Short hiking','Long hiking','Camping','Glamping','Trail running','Mountaineering','Biking','Others']
+    tripTypeOptions:['Short hiking','Long hiking','Camping','Glamping','Trail running','Mountaineering','Biking','Others'],
+    provinceOptions:['Beijing','Chongqing','Shanghai','Tianjin','Anhui','Fujian','Gansu','Guangdong','Guizhou','Hainan','Hebei','Heilongjiang','Henan','Hubei','Hunan', 'Jiangsu','Jiangxi','Jilin','Liaoning','Qinghai','Shaanxi','Shandong','Shanxi','Sichuan','Yunnan','Zhejiang','Guangxi','Inner Mongolia','Ningxia','Xinjiang','Tibet','Hong Kong','Macau','International']
   },
 
 
@@ -76,6 +77,13 @@ tripTyperPicker:function(e){
   wx.navigateTo({
       url:`/pages/picker/picker?id=${e.detail.value}`
   })
+},
+
+locationPicker: function(e){
+  console.log("location picked",e)
+  wx.navigateTo({
+    url:`/pages/pickerLocation/pickerLocation?id=${e.detail.value}`
+  })
 }
-})
+}) 
 

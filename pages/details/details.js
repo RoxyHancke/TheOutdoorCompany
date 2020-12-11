@@ -143,7 +143,13 @@ console.log("percentage," ,percentage);
                                                         
                                                               
     },
-                  
+    
+    // indicatorDots: true,
+    // autoplay: true,
+    // interval: 5000,
+    // duration: 1000
+    
+
     changeIndicatorDots() {
         this.setData({
             indicatorDots: !this.data.indicatorDots
@@ -185,6 +191,11 @@ register: function () {
                     confirmText: "Register",
                     confirmColor: "#3CC51F",
                     success: (result) => {
+                            if (result.confirm) {
+                              // wx.navigateTo({
+                              //   url: '/pages/qr/qr?id',
+                              // })
+                                 const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
                                   console.log("haaluyarrrrrrr",userInfo.id);
@@ -227,39 +238,44 @@ register: function () {
                                                               (error)=>{
                                                                 console.log("new review save", eroor)}
                                                               }
+                                                              
                                                               )
+                                                              wx.switchTab({
+                                                                url: '../home/home',
+                                                              })
                                                             }else{
                                                               wx.showModal({
                                                                 title: 'Information!',
                                                                 content: 'You are alrady in!',
                                                                 showCancel: false,
-                                                                confirmText: 'Cansel',
+                                                                confirmText: 'Canel',
                                                                 confirmColor: '#3CC51F',
                                                               });
                                                             }
                                                   // pictures.push(participantForOneTrip,userInfo.id));
-                                             
+                                            //       for (let i = 0; i < pictures.length; i++) {
+                                            //         const participantForOneTrip = partipicants[i].participantId.avatar;
+                                            //         pictures.push(participantForOneTrip);
+                                            //     };
+                                            // // })
+                                            //     console.log('UUU',partipicants.length)     
+                                            //     this.setData({
+                                            //         participants: pictures,
+                                            //         attendees_number:partipicants.length,
+                                            //     }); 
                                                 
                                               });
                                               // Try getparticipant 
-                                                      
-                                                     
-                                                      
-                                                   
-                                                
-                                                      
-                                                      
-                                                                };
-                                                              },
+   
+                                                                }}
                                           
-                                                          });
-                                          
-                                          
-                                          
-                                          
+                                                          }
+                                                        });
+
                                                         };
-                                                      
+                                                        
                                                       },
+                                                     
                                                     })
                                                                     // const partId= res.data.objects[0].id,;
                                                                     // const OwnerForTrip = Owner.tripOwner;

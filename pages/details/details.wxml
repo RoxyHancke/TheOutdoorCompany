@@ -1,36 +1,11 @@
 
-<!-- <view class="page" data-weui-theme="{{theme}}"> -->
-  <view class="container">
-        <!-- Trying to Scrool horizantal  -->
-        <!-- <view class="page-body">
-            <view class="page-section-spacing"> 
-                                        <view class="page-section-spacing">
-                                            <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-                                                <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
-                                                <view class="" wx:for="{{pictures}}" wx:for-item="pic" wx:key="id" wx:for-index="acx">
-                                                        <view>Nefisssss</view>
-                                                        <image class="" src="{{pic}}">Picture</image>
-                                                </view>     
-                                            </scroll-view>
-                    </view>
-            </view>
-        </view> -->
-        <!-- <text>Horizontal Scroll\n横向滚动</text> -->
-        <!-- ********** swiper -->
-                <swiper class="swiper" mode="scaleToFill" scaletoindicator-dots="{{indicatorDots}}"
-                                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                    <block wx:for="{{activity.picture}}">
-                                <swiper-item>
-                                    <view class="background-image" style="background-image: url({{item}}), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-                                    {{activity.title}}
-                                    <!-- <image src="/pages/details/3dots.png">
-                                    </image> -->
-                                </view>
-                                </swiper-item>
-                    </block>
-                </swiper>
-                                   
-<!-- ********************************* swiper -->
+<view class="container">
+    <swiper class="swiper" mode="scaleToFill" indicator-dots="{{true}}" indicator-color="#FFF" autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}">
+            <swiper-item wx:for="{{activity.picture}}">
+                <view class="background-image" style="background-image: url({{item}}), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> {{activity.title}}</view>
+            </swiper-item>
+    </swiper>
+   
         <view class="page-section">
             <view class="page_section"> 
                 <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-into-view="{{scrollInto}}" scroll-with-animation="{{true}}"  class="list" > 
@@ -47,7 +22,7 @@
             </view>
 
                 <view class="tripDes"> 📍{{activity.tripDes}}</view> 
-                <view class="tripDes"> 💴{{activity.costEst}}</view>     
+                <view class="tripDes"> 💴¥{{activity.costEst}}</view>     
        
                 <view class="attendees"> 
 
@@ -81,7 +56,11 @@
                 <view class="contactInfo">
                         <view class="contact">CONTACT INFORMATION</view>
                         <view>Name: {{name}}</view>
+                          <view class="QRcode"> Scan QR code to join trip
+                        <image src="/pages/details/qr-code.png"></image>
+                          </view>
                 </view>
+                
                
         </view>
         <view class="buttons" style="">
@@ -91,6 +70,7 @@
 
         </view>
         </view>
+       
 
     
 
