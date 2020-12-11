@@ -2,23 +2,37 @@
 
 .namebox{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30rpx;
  
 } 
 
+.imageBorder {
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 400rpx;
+  width: 400rpx;
+  margin: 30rpx;
+  background-color: white;
+  padding: 20rpx;
+  background-color: #27B5D9;
+  border-radius: 2%;
+}
+
 .login_button {
   position: relative;
-  width: 80%;
+  width: 60%;
   color: white;
   padding: 5rpx 5rpx;
   border-radius: 5rpx;
   font-weight: bold;
   transition: 0.3s ease;
   margin: 0 auto;
-  background-color: #219EBC;
+  background-color: blue;
 }
 
 .buttonOrangeSmall{
@@ -43,17 +57,17 @@
 
 .name {
   font-weight: bold;
-  font-size: medium;
+  font-size: large;
   text-transform: capitalize;
-  color:#023047;
+  color:white;
 }
 
 .interest {
   font-weight: normal;
   font-size: small;
   text-transform: capitalize;
-  color:#023047;
-  padding: 10rpx;
+  color: white;
+  padding: 15rpx;
 }
 
 .avatar {
@@ -62,17 +76,9 @@
   margin: 20rpx;
   border-radius: 50%;
   position: relative;
-  border: 5rpx solid white;
+  border: 6rpx solid white;
 }
 
-
-/* .drop-down-card {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #023047;
-} */
 
 .big-card {
   justify-content: center;
@@ -176,5 +182,17 @@
   padding: 9rpx;
 } 
 
-
+.background-image {
+  height: 450rpx;
+  width: 100%;
+  background-size: cover;
+  background-position: center;             
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1500rpx;
+}
   
