@@ -3,7 +3,7 @@
 <view class="container">
   <!-- go to log in page if there is no userinfo -->
   <view wx:if="{{!userInfo.id}}">
-    <view class="background-image" style="background-image: url(), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+    <view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1knkWNKWXsi1LyPR.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
     <button class="login_button" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Log in to edit profile</button>
     <!-- </view>
     <image src="/pages/profile/login-image.jpg"  mode="scaleToFill"></image>-->
@@ -12,6 +12,8 @@
   <view wx:else>
 <!-- personal info box -->
     <view class="namebox">
+      
+      <view class="imageBorder">
       <view>
         <image class="avatar" src="{{items.profilePicture}}"></image>
       </view>
@@ -27,6 +29,7 @@
             <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
           </view>
       </view>
+    </view>
     </view>
 
 <!-- short bio box -->

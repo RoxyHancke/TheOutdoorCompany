@@ -184,7 +184,7 @@ register: function () {
                 });
                 wx.showModal({
                     title: "Register?",
-                    content: `Are you sure you want to register this trip? `,
+                    content: `Are you sure you want to register for this trip? `,
                     showCancel: true,
                     cancelText: "Cancel",
                     cancelColor: "#000000",
