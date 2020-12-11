@@ -1,0 +1,20 @@
+<view>
+  <view>
+    <text style="font-size:48rpx; color:#219EBC;">My messages</text>
+  </view>
+  <view class="big-card" >
+      <view bindtap="goReply" wx:for="{{items}}" id="{{item.id}}" wx:key="id">
+         <view>
+            <!-- <image class="picture" src="{{item.picture[0]}}" mode="scaleToFill" ></image> -->
+            <view>
+               <view>From: {{item.senderName}} </view>
+               <view>Re: {{item.tripName}}</view>
+               <view>{{item.context}} </view>
+            </view>
+            <view>
+              <button class="buttonBlueSmall">Reply</button>
+            </view>
+         </view>
+      </view>
+   </view>
+</view>

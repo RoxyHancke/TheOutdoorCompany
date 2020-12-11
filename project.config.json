@@ -112,6 +112,13 @@
           "id": -1,
           "name": "pages/qr/qr",
           "pathName": "pages/qr/qr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/msg/msg",
+          "pathName": "pages/msg/msg",
           "scene": null
         }
       ]
