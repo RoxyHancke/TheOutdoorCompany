@@ -1,5 +1,5 @@
 
-<view>
+<view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kngyy46GY7147PN.jpeg)">
 <view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1knl6eJBAetO85Tx.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), width:100%">
       <view class="homepageTitle" > Outdoor Lovers</view>
       <text class= "chooseTrip">Choose your trip</text>

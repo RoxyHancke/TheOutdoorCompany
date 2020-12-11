@@ -183,13 +183,8 @@ register: function () {
                   userInfo: userInfo,
                 });
                 wx.showModal({
-<<<<<<< HEAD
                     title: "Register",
                     content: `Do you want to join this trip?`,
-=======
-                    title: "Register?",
-                    content: `Are you sure you want to register for this trip? `,
->>>>>>> master
                     showCancel: true,
                     cancelText: "Cancel",
                     cancelColor: "#000000",

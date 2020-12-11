@@ -5,11 +5,12 @@
   align-items: center;
   flex-direction: column;
   padding: 30rpx;
+  background-color: white;
  
 } 
 
 .imageBorder {
-  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  /* box-shadow: 0 0 10rpx rgba(0,0,0,0.2); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +20,7 @@
   margin: 30rpx;
   background-color: white;
   padding: 20rpx;
-  background-color: #27B5D9;
+  /* background-color: #27B5D9; */
   border-radius: 2%;
 }
 
@@ -59,14 +60,14 @@
   font-weight: bold;
   font-size: large;
   text-transform: capitalize;
-  color:white;
+  color:black;
 }
 
 .interest {
   font-weight: normal;
   font-size: small;
   text-transform: capitalize;
-  color: white;
+  color:black;
   padding: 15rpx;
 }
 

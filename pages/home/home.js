@@ -75,7 +75,7 @@ tripTyperPicker:function(e){
   console.log("trip type filter",e)
   console.log("trip value",e.detail.value)
   wx.navigateTo({
-      // url:`/pages/picker/picker?id=${e.detail.value}`
+      url:`/pages/picker/picker?id=${e.detail.value}`
   })
 },
 
