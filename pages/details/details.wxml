@@ -55,13 +55,11 @@
 
                 <view class="contactInfo">
                         <view class="contact">CONTACT INFORMATION</view>
-                        <view>Name: {{name}}</view>
-                          <view class="QRcode"> Scan QR code to join trip
+                        <view>Trip Owner: {{name}}</view>
+                          <!-- <view class="QRcode"> Scan QR code to join trip
                         <image src="/pages/details/qr-code.png"></image>
-                          </view>
-                </view>
-                
-               
+                          </view> -->
+                </view> 
         </view>
         <view class="buttons" style="">
       <button class="share-btn"> Share</button>

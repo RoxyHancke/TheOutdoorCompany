@@ -192,7 +192,6 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-             
 
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
@@ -244,10 +243,12 @@ register: function () {
                                                               })
                                                             }else{
                                                               wx.showModal({
-                                                                title: 'Information!',
-                                                                content: 'You are alrady in!',
+                                                                title: 'Information',
+                                                                content: 'You are alrady in :D',
                                                                 showCancel: false,
-                                                                confirmText: 'Canel',
+
+                                                                confirmText: 'Cancel',
+
                                                                 confirmColor: '#3CC51F',
                                                               });
                                                             }
