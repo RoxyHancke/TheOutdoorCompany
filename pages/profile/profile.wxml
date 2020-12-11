@@ -5,9 +5,10 @@
   <view wx:if="{{!userInfo.id}}">
     <view class="background-image" style="background-image: url(), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
     <button class="login_button" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Log in to edit profile</button>
-    </view>
-    <image src="/pages/profile/login-image.jpg"  mode="scaleToFill"></image>
-  </view>
+    <!-- </view>
+    <image src="/pages/profile/login-image.jpg"  mode="scaleToFill"></image>-->
+  </view> 
+ </view> 
   <view wx:else>
 <!-- personal info box -->
     <view class="namebox">
@@ -24,9 +25,6 @@
        <view style="display: flex;justify-content: center;">
           <view>
             <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
-          </view>
-          <view>
-            <button class="buttonBlueSmall" bindtap="tellUsMore">Bucket list</button>
           </view>
       </view>
     </view>
@@ -53,7 +51,7 @@
 
       </view>
     </view>
-  </view>
+  
 
 
   <view class="big-card">
@@ -70,6 +68,6 @@
          </view>
       </view>
   </view>
-
-  </view>
+ </view>
+</view>
 
