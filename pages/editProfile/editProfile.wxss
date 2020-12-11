@@ -39,7 +39,7 @@ box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
 }
 
 .bio_box {
-  color: #023047;
+  color: white;
 
 }
 
@@ -55,3 +55,17 @@ box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   background-color: white;
   padding: 8rpx;
 }
+.background-image {
+  height: 450rpx;
+  width: 100%;
+  background-size: cover;
+  background-position: center;             
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1500rpx;
+}
+  

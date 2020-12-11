@@ -183,8 +183,13 @@ register: function () {
                   userInfo: userInfo,
                 });
                 wx.showModal({
+<<<<<<< HEAD
                     title: "Register",
                     content: `Do you want to join this trip?`,
+=======
+                    title: "Register?",
+                    content: `Are you sure you want to register for this trip? `,
+>>>>>>> master
                     showCancel: true,
                     cancelText: "Cancel",
                     cancelColor: "#000000",
@@ -192,9 +197,7 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-                                 wx.navigateTo({
-                                   url: '/pages/qr/qr',
-                                 });
+
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
@@ -238,18 +241,33 @@ register: function () {
                                                               (error)=>{
                                                                 console.log("new review save", eroor)}
                                                               }
+                                                              
                                                               )
+                                                              wx.switchTab({
+                                                                url: '../home/home',
+                                                              })
                                                             }else{
                                                               wx.showModal({
                                                                 title: 'Information',
                                                                 content: 'You are alrady in :D',
                                                                 showCancel: false,
+
                                                                 confirmText: 'Cancel',
+
                                                                 confirmColor: '#3CC51F',
                                                               });
                                                             }
                                                   // pictures.push(participantForOneTrip,userInfo.id));
-                                             
+                                            //       for (let i = 0; i < pictures.length; i++) {
+                                            //         const participantForOneTrip = partipicants[i].participantId.avatar;
+                                            //         pictures.push(participantForOneTrip);
+                                            //     };
+                                            // // })
+                                            //     console.log('UUU',partipicants.length)     
+                                            //     this.setData({
+                                            //         participants: pictures,
+                                            //         attendees_number:partipicants.length,
+                                            //     }); 
                                                 
                                               });
                                               // Try getparticipant 
@@ -260,8 +278,9 @@ register: function () {
                                                         });
 
                                                         };
-                                                      
+                                                        
                                                       },
+                                                     
                                                     })
                                                                     // const partId= res.data.objects[0].id,;
                                                                     // const OwnerForTrip = Owner.tripOwner;
