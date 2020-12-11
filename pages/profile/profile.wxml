@@ -26,9 +26,6 @@
           <view>
             <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
           </view>
-          <view>
-            <button class="buttonBlueSmall" bindtap="tellUsMore">Bucket list</button>
-          </view>
       </view>
     </view>
 

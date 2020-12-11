@@ -192,7 +192,9 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-                            
+                                 wx.navigateTo({
+                                   url: '/pages/qr/qr',
+                                 });
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
@@ -239,10 +241,10 @@ register: function () {
                                                               )
                                                             }else{
                                                               wx.showModal({
-                                                                title: 'Information!',
-                                                                content: 'You are alrady in!',
+                                                                title: 'Information',
+                                                                content: 'You are alrady in :D',
                                                                 showCancel: false,
-                                                                confirmText: 'Cansel',
+                                                                confirmText: 'Cancel',
                                                                 confirmColor: '#3CC51F',
                                                               });
                                                             }
