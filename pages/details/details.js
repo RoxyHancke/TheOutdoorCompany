@@ -192,7 +192,8 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-                            
+             
+
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
@@ -236,18 +237,31 @@ register: function () {
                                                               (error)=>{
                                                                 console.log("new review save", eroor)}
                                                               }
+                                                              
                                                               )
+                                                              wx.switchTab({
+                                                                url: '../home/home',
+                                                              })
                                                             }else{
                                                               wx.showModal({
                                                                 title: 'Information!',
                                                                 content: 'You are alrady in!',
                                                                 showCancel: false,
-                                                                confirmText: 'Cansel',
+                                                                confirmText: 'Canel',
                                                                 confirmColor: '#3CC51F',
                                                               });
                                                             }
                                                   // pictures.push(participantForOneTrip,userInfo.id));
-                                             
+                                            //       for (let i = 0; i < pictures.length; i++) {
+                                            //         const participantForOneTrip = partipicants[i].participantId.avatar;
+                                            //         pictures.push(participantForOneTrip);
+                                            //     };
+                                            // // })
+                                            //     console.log('UUU',partipicants.length)     
+                                            //     this.setData({
+                                            //         participants: pictures,
+                                            //         attendees_number:partipicants.length,
+                                            //     }); 
                                                 
                                               });
                                               // Try getparticipant 
@@ -258,8 +272,9 @@ register: function () {
                                                         });
 
                                                         };
-                                                      
+                                                        
                                                       },
+                                                     
                                                     })
                                                                     // const partId= res.data.objects[0].id,;
                                                                     // const OwnerForTrip = Owner.tripOwner;
