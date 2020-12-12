@@ -3,7 +3,7 @@
 <view class="container">
 <view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1knkuAVNPjeUkteY.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
 <view>
-  <text style="color:#023047; font-size:medium">Edit your profile here!</text>
+  <view class="title">Edit your profile here!</view>
 </view>
 
 <view>

@@ -65,7 +65,7 @@
                 </view> 
         </view>
         <view class="buttons" style="">
-      <button class="share-btn"> Share</button>
+      <button  open-type="share" class="share-btn"> Share</button>
       <button bindtap="register" class="register-btn"> Register</button>
    </view>
 
