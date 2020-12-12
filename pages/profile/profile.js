@@ -29,9 +29,13 @@ Page({
 
           console.log("user query results",res)
           const originalShortBio = res.data.objects[0].shortBio;
+          let newBio = "";
+          if(originalShortBio[0]) {
+            newBio = originalShortBio[0].toUpperCase() + originalShortBio.slice(1, originalShortBio.length);
+          }
           const newUser = {
             ...res.data.objects[0],
-            shortBio: originalShortBio[0].toUpperCase() + originalShortBio.slice(1, originalShortBio.length)
+            shortBio: newBio
           };
           console.log(newUser);
           this.setData({
