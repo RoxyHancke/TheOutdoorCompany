@@ -61,7 +61,6 @@
   font-size: larger;
   text-transform: capitalize;
   color: #023047;
-
 }
 
 .interest {
@@ -69,7 +68,6 @@
   font-size: small;
   text-transform: capitalize;
   color: #023047;
-
   padding: 15rpx;
   height: 200rpx;
   text-align: center;
