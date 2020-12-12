@@ -147,3 +147,11 @@
   width: 320rpx;
 }
 
+.buttonBlueSmall{
+  color: white;
+  font-weight: bold;
+  background-color:#219EBC;
+  max-width:100%;
+  font-size:small;
+  margin: 10rpx;
+}

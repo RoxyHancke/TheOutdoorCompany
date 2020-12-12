@@ -56,6 +56,9 @@
                 <view class="contactInfo">
                         <view class="contact">CONTACT INFORMATION</view>
                         <view>Trip Owner: {{name}}</view>
+                        <view>
+                            <button class="buttonBlueSmall" bindtap="sendMsg">Message Owner</button>
+                        </view>
                           <!-- <view class="QRcode"> Scan QR code to join trip
                         <image src="/pages/details/qr-code.png"></image>
                           </view> -->

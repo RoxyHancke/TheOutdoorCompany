@@ -12,7 +12,8 @@
     "pages/pickerLocation/pickerLocation",
     "pages/qr/qr",
     "pages/msg/msg",
-    "pages/reply/reply"
+    "pages/reply/reply",
+    "pages/send/send"
   ],
   "plugins": {
     "sdkPlugin": {

@@ -192,7 +192,9 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-
+                                 wx.navigateTo({
+                                   url: '../qr/qr',
+                                 })
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
@@ -275,8 +277,15 @@ register: function () {
                                                         };
                                                         
                                                       },
-                                                     
-                                                    })
+
+    sendMsg:function(e){
+      console.log("message owner",e);
+      console.log("trip",this.data.activity.id);
+      wx.navigateTo({
+        url: `../send/send?id=${this.data.activity.id}`
+      })
+    }                                        
+    })
                                                                     // const partId= res.data.objects[0].id,;
                                                                     // const OwnerForTrip = Owner.tripOwner;
                                                                       // const tripId=Owner.id;
