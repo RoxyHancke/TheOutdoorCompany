@@ -110,6 +110,20 @@
           "id": -1,
           "name": "pages/msg/msg",
           "pathName": "pages/msg/msg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/send/send",
+          "pathName": "pages/send/send",
           "scene": null
         }
       ]

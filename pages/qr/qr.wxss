@@ -2,7 +2,16 @@
 
 .image-center{
  display:flex;
- height: 600px;                   
+ height: 350rpx; 
+ width: 350rpx; 
+ align-items: center;
  justify-content: center;
- align-items:center
+ flex-direction: column;
+
+}
+
+.qr {
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
