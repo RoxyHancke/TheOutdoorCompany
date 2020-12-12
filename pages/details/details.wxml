@@ -28,13 +28,13 @@
 
                 <view style="padding: 10rpx">ATTENDEES</view>
 
-                <view style="padding: 8rpx">{{attendees_number}} / {{max_attendees}} Attendees*</view>
+                <view style="padding: 8rpx">{{attendees_number}} / {{max_attendees}} Attendees</view>
 
                 <progress percent="30"  color="#219EBC" active />
 
-                </view>
+                
         <!-- ***** Avatar -->
-        <view  >
+    
                     <block wx:for="{{participants}}">
                               
                                     <!-- <view class="background-image" style="background-image: url({{item}}), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> -->
@@ -55,13 +55,11 @@
 
                 <view class="contactInfo">
                         <view class="contact">CONTACT INFORMATION</view>
-                        <view>Name: {{name}}</view>
-                          <view class="QRcode"> Scan QR code to join trip
+                        <view>Trip Owner: {{name}}</view>
+                          <!-- <view class="QRcode"> Scan QR code to join trip
                         <image src="/pages/details/qr-code.png"></image>
-                          </view>
-                </view>
-                
-               
+                          </view> -->
+                </view> 
         </view>
         <view class="buttons" style="">
       <button class="share-btn"> Share</button>

@@ -183,8 +183,8 @@ register: function () {
                   userInfo: userInfo,
                 });
                 wx.showModal({
-                    title: "Register?",
-                    content: `Are you sure you want to register this trip? `,
+                    title: "Register",
+                    content: `Do you want to join this trip?`,
                     showCancel: true,
                     cancelText: "Cancel",
                     cancelColor: "#000000",
@@ -192,7 +192,6 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-             
 
                                  const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
                             if (result.confirm) {   
@@ -247,7 +246,9 @@ register: function () {
                                                                 title: 'Information!',
                                                                 content: 'You are already in!',
                                                                 showCancel: false,
-                                                                confirmText: 'Canel',
+
+                                                                confirmText: 'Cancel',
+
                                                                 confirmColor: '#3CC51F',
                                                               })
                                                               wx.switchTab({

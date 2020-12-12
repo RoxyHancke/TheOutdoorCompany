@@ -1,15 +1,11 @@
 
+<view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kngyy46GY7147PN.jpeg)">
+<view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1knl6eJBAetO85Tx.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), width:100%">
+      <view class="homepageTitle" > Outdoor Lovers</view>
+      <text class= "chooseTrip">Choose your trip</text>
+   </view>
+</view>
 
-
-<image src="https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg" style="width:100%"> 
-   <view class="background-image" style="background-image: url(https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kkUR75C6YP4Ygsn.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-      <view> Outdoor Lovers</view>
-      <text>Choose your trip</text>
-      </view>
-   <view> Outdoor Lovers</view>
-<text>Choose your trip</text>
-
-</image>
 <view class="container">
 
    <view class="drop-down-card" style="border-width: thin; box-shadow: 0 0 15rpx rgba(0,0,0,0.2)">

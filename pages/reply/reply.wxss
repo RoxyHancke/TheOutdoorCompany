@@ -1,31 +1,7 @@
+/* pages/reply/reply.wxss */
+/* pages/msg/msg.wxss */
 /* pages/home/home.wxss */
 
-.background-image {
-  height: 450rpx;
-  width: 100%;
-  background-size: cover;
-  background-position: center;             
-  padding: 20rpx;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.homepageTitle {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.chooseTrip{
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
 
 .drop-down-card {
   justify-content: center;
@@ -142,7 +118,23 @@
   padding: 9rpx;
 } 
 
+.buttonOrangeSmall{
+  color: white;
+  font-weight: bold;
+  background-color: #FB8500;
+  max-width:50%;
+  font-size:small;
+  margin: 10rpx;
+}
 
+.buttonBlueSmall{
+  color: white;
+  font-weight: bold;
+  background-color:#219EBC;
+  max-width:100%;
+  font-size:small;
+  margin: 10rpx;
+}
 
 
 
