@@ -243,13 +243,16 @@ register: function () {
                                                               })
                                                             }else{
                                                               wx.showModal({
-                                                                title: 'Information',
-                                                                content: 'You are alrady in :D',
+                                                                title: 'Information!',
+                                                                content: 'You are already in!',
                                                                 showCancel: false,
 
                                                                 confirmText: 'Cancel',
 
                                                                 confirmColor: '#3CC51F',
+                                                              })
+                                                              wx.switchTab({
+                                                                url: '../home/home',
                                                               });
                                                             }
                                                   // pictures.push(participantForOneTrip,userInfo.id));
@@ -272,8 +275,15 @@ register: function () {
                                                           }
                                                         });
 
-                                                        };
-                                                        
+                                                        }else{
+                                                          wx.showModal({
+                                                            title: 'Information!',
+                                                            content: 'You must be first log in plaese!',
+                                                            showCancel: false,
+                                                            confirmText: 'Canel',
+                                                            confirmColor: '#3CC51F',
+                                                          }); 
+                                                        }
                                                       },
                                                      
                                                     })
