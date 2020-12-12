@@ -183,9 +183,10 @@ Page({
       url: `/pages/editProfile/editProfile?id=${this.data.items.id}`,
     })
   },
-  tellUsMore: function(e){
+  viewMsg: function(e){
+    console.log("go to msg box",e)
     wx.navigateTo({
-      url: `/pages/moreabout/moreabout`,
+      url: `/pages/msg/msg?id=${this.data.items.id}`,
     })
   },
 

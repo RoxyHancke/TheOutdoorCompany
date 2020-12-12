@@ -1,0 +1,22 @@
+<!--pages/reply/reply.wxml-->
+<view>
+  <view>
+    <text style="font-size:48rpx; color:#219EBC;">Reply:</text>
+  </view>
+   <form bindsubmit="formSubmit">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_active">
+                    <view class="weui-cell__bd">
+                        <textarea name="reply" class="weui-textarea" placeholder="type something!" style="height: 3.3em" />
+                        <view class="weui-textarea-counter">0/200</view>
+                    </view>
+                </view>
+            </view>
+            <view style="display: flex;justify-content: center;flex-directon: column">
+              <button class="buttonBlueSmall" bindtap="query">✓</button>
+            </view>
+            <view>
+              <button class="buttonBlueSmall" form-type="submit">Submit</button>
+            </view>
+  </form>
+</view>

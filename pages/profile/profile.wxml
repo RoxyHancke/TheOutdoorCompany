@@ -28,6 +28,9 @@
           <view>
             <button class="buttonOrangeSmall" bindtap="editProfile">Edit Profile</button>
           </view>
+          <view>
+            <button class="buttonBlueSmall" bindtap="viewMsg">Messages</button>
+          </view>
       </view>
     </view>
     </view>
