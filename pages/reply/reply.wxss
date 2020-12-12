@@ -1,0 +1,142 @@
+/* pages/reply/reply.wxss */
+/* pages/msg/msg.wxss */
+/* pages/home/home.wxss */
+
+
+.drop-down-card {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #023047;
+  
+}
+
+.trip-drop-down {
+  display: flex;
+  border-right: solid; 
+  border-width: thin;
+  align-items: center;
+  justify-content: center;
+  width: 340rpx;
+  height: 80rpx;
+  font-weight: bold;
+} 
+
+.drop-down-image {
+  width: 15rpx;
+  height: 15rpx;
+  margin: 10rpx;
+
+}
+
+.month {
+  font-weight: bold;
+  width: 340rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-card {
+  justify-content: center;
+  align-items: center;
+  color: #023047;
+  border: 2px solid rgba(248,248,248,0.03);
+
+}
+
+.card-product{
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  height: 300rpx;
+  margin: 10rpx 0 10rpx;
+} 
+
+.picture {
+  height: 300rpx;
+  width: 300rpx
+}
+
+.card-product-infos {
+  padding: 0 0 15rpx 15rpx; 
+  font-family: Lato, sans-serif;
+  font-weight: bolder;
+  height: 200rpx;
+  width: 400rpx;
+}
+
+.title {
+  font-size: small;
+  font-weight: bolder;
+  color: #219EBC;
+  text-transform: uppercase;
+}
+
+.tripDes {
+  font-size: small;
+  font-weight: normal;
+  color: #FB8500;
+  text-transform: capitalize;
+}
+
+.tripType {
+  font-size: x-small;
+  font-weight: normal;
+  color: #023047;
+  text-transform: capitalize;
+}
+
+.tripStart {
+  font-size: x-small;
+  font-weight: lighter;
+  color: #023047;
+}
+
+.costEst {
+  font-size: x-small;
+  font-weight: lighter;
+  color: #023047;
+}
+
+.displayCost {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+  font-weight: lighter;
+  color: #023047;
+  padding-top: 20px;
+  }
+
+
+
+.container {
+  height: 100%;
+  font-family: Lato;
+  padding: 9rpx;
+} 
+
+.buttonOrangeSmall{
+  color: white;
+  font-weight: bold;
+  background-color: #FB8500;
+  max-width:50%;
+  font-size:small;
+  margin: 10rpx;
+}
+
+.buttonBlueSmall{
+  color: white;
+  font-weight: bold;
+  background-color:#219EBC;
+  max-width:100%;
+  font-size:small;
+  margin: 10rpx;
+}
+
+
+
+
+  
