@@ -1,4 +1,4 @@
-<view>
+<view class="container">
   <view>
     <view class="title">My messages</view>
   </view>

@@ -1,3 +1,7 @@
-<view class="qr">
+
+<view class="container">
+<view class="qr"> Scan QR code to join trip
   <image class="image-center" src="https://cloud-minapp-37958.cloud.ifanrusercontent.com/1kng4cRkSChl8mu8.png"></image>
+</view>
+
 </view>

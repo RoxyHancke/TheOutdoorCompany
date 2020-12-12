@@ -21,9 +21,9 @@
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   display: flex;
   align-items: flex-start;
-  height: 300rpx;
   margin: 10rpx 0 10rpx;
   flex-direction: column;
+  padding: 30rpx;
 } 
 
 
@@ -37,9 +37,9 @@
 
 .button{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   margin: 20rpx;
   
@@ -49,7 +49,7 @@
 
 
 .container {
-  height: 100%;
+  height: 80%;
   font-family: Lato;
   padding: 9rpx;
 } 
