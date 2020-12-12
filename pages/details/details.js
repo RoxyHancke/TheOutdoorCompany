@@ -86,7 +86,7 @@ Page({
                                                                    participants: pictures,
                                                                    attendees_number:partipicants.length,
                                                                }); 
-                                                               const percentage=100*this.data.max_attendees/this.data.attendees_number;
+                                                               const percentage=(100*this.data.max_attendees)/this.data.attendees_number;
 console.log("percentage," ,percentage);
 
     // *******                            
@@ -173,12 +173,21 @@ console.log("percentage," ,percentage);
             duration: e.detail.value
           })
         },
-        /////////Register
+        /////////share
+
+  share: function () {
+    console.log(share);
+          wx.showShareMenu({
+            withShareTicket: true
+          })
+        },
+
 register: function () {
           const userInfo = wx.getStorageSync("userInfo");
           const QpartTripId = wx.getStorageSync("partTripId");
           console.log("register baslasin",QpartTripId);
-          if (userInfo) {
+          console.log(userInfo.id);
+          if (userInfo.id) {
                 this.setData({
                   userInfo: userInfo,
                 });
@@ -192,9 +201,6 @@ register: function () {
                     confirmColor: "#3CC51F",
                     success: (result) => {
                             if (result.confirm) {
-
-                                 const UsergetInfo = new wx.BaaS.TableObject("TOC_userInfo");
-                            if (result.confirm) {   
                                  const Participant = new wx.BaaS.TableObject("TOC_participant");
                                   console.log("haaluyarrrrrrr",userInfo.id);
                                   const Query = new wx.BaaS.Query()
@@ -207,7 +213,7 @@ register: function () {
                                                 //   tripParticipant:res.data.objects,
                                                 // });
                                                 const tripParticipant = res.data.objects;
-                                                var k=0;
+                                                var k="false";
                                                 console.log("allahim sana geliyorum",res.data.objects);
                                                 for (let i = 0; i < tripParticipant.length; i++) {
                                                     console.log("ukuku",tripParticipant[i].participantId.id)
@@ -220,73 +226,90 @@ register: function () {
                                                   };
                                                 };
                                                   console.log("k",k)
-                                                    if(k==="false") {
-                                                      console.log("niye geldim")
-                                                    const NewParticipant = new wx.BaaS.TableObject("TOC_participant");
-                                                    //create a blank entry
-                                                    const newParticipant = NewParticipant.create();
-                                                    //set the record
-                                                          newParticipant.set({
-                                                                tripId:QpartTripId,
-                                                              participantId:userInfo.id,
-                                                          });
-                                                          newParticipant.save().then(
+                                                    if(k==="false") 
+                                                    {
+                                                            console.log("you ar not in")
+                                                            const NewParticipant = new wx.BaaS.TableObject("TOC_participant");
+                                                            //create a blank entry
+                                                            const newParticipant = NewParticipant.create();
+                                                            //set the record
+                                                                  newParticipant.set({
+                                                                        tripId:QpartTripId,
+                                                                        participantId:userInfo.id,
+                                                                  });
+                                                           newParticipant.save().then(
                                                             (res)=>{
-                                                              console.log("User profile updated",res);
+                                                              console.log("Trip details updated",res);
                                                               (error)=>{
                                                                 console.log("new review save", eroor)}
                                                               }
-                                                              
+                                
                                                               )
-                                                              wx.switchTab({
-                                                                url: '../home/home',
+                                                              console.log("everything fine");
+                                                              wx.showModal({
+                                                                title: "Registered",
+                                                                content: `You are succesfully registered`,
+                                                                showCancel: false,
+                                                                cancelText: "Ok",
+                                                                cancelColor: "#000000",
+                                                                confirmText: "Ok",
+                                                                confirmColor: "#3CC51F",
+                                                                success: (result) => {
+                                                                  wx.switchTab({
+                                                                    url: '../home/home',
+                                                                  })
+                                                                }
                                                               })
-                                                            }else{
+                                                              
+                                                    }else{k=="true"
                                                               wx.showModal({
                                                                 title: 'Information!',
                                                                 content: 'You are already in!',
                                                                 showCancel: false,
-
                                                                 confirmText: 'Cancel',
-
                                                                 confirmColor: '#3CC51F',
                                                               })
-                                                              wx.switchTab({
-                                                                url: '../home/home',
-                                                              });
+                                                             
+
+
+
+
+
+                                                              
                                                             }
-                                                  // pictures.push(participantForOneTrip,userInfo.id));
-                                            //       for (let i = 0; i < pictures.length; i++) {
-                                            //         const participantForOneTrip = partipicants[i].participantId.avatar;
-                                            //         pictures.push(participantForOneTrip);
-                                            //     };
-                                            // // })
-                                            //     console.log('UUU',partipicants.length)     
-                                            //     this.setData({
-                                            //         participants: pictures,
-                                            //         attendees_number:partipicants.length,
-                                            //     }); 
+                                                
                                                 
                                               });
-                                              // Try getparticipant 
-   
-                                                                }}
+                                                                          // Try getparticipant 
+                                                                            // pictures.push(participantForOneTrip,userInfo.id));
+                                                                        //       for (let i = 0; i < pictures.length; i++) {
+                                                                        //         const participantForOneTrip = partipicants[i].participantId.avatar;
+                                                                        //         pictures.push(participantForOneTrip);
+                                                                        //     };
+                                                                        // // })
+                                                                        //     console.log('UUU',partipicants.length)     
+                                                                        //     this.setData({
+                                                                        //         participants: pictures,
+                                                                        //         attendees_number:partipicants.length,
+                                                                        //     }); 
+  
+                            }
                                           
                                                           }
                                                         });
+          }else{
+                wx.showModal({
+                  title: 'Information!',
+                  content: 'You must be first log in plaese!',
+                  showCancel: false,
+                  confirmText: 'Canel',
+                  confirmColor: '#3CC51F',
+                }); 
+            }
+      },
+      
+    })
 
-                                                        }else{
-                                                          wx.showModal({
-                                                            title: 'Information!',
-                                                            content: 'You must be first log in plaese!',
-                                                            showCancel: false,
-                                                            confirmText: 'Canel',
-                                                            confirmColor: '#3CC51F',
-                                                          }); 
-                                                        }
-                                                      },
-                                                     
-                                                    })
                                                                     // const partId= res.data.objects[0].id,;
                                                                     // const OwnerForTrip = Owner.tripOwner;
                                                                       // const tripId=Owner.id;
