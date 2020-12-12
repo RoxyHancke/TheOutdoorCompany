@@ -1,12 +1,8 @@
 /* pages/qr/qr.wxss */
 
 .image-center{
- display:flex;
- height: 350rpx; 
- width: 350rpx; 
- align-items: center;
- justify-content: center;
- flex-direction: column;
+ height: 500rpx; 
+ width: 500rpx; 
 
 }
 
@@ -14,4 +10,15 @@
  display: flex;
  align-items: center;
  justify-content: center;
+ flex-direction: column;
+ color: #023047;
+ font-weight: bold;
+} 
+
+.container {
+  display:flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ height: 100vh;
 }
