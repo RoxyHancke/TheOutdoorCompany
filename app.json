@@ -10,7 +10,9 @@
     "pages/picker/picker",
     "pages/aboutUs/aboutUs",
     "pages/pickerLocation/pickerLocation",
-    "pages/qr/qr"
+    "pages/qr/qr",
+    "pages/msg/msg",
+    "pages/reply/reply"
   ],
   "plugins": {
     "sdkPlugin": {
