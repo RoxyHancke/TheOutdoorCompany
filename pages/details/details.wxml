@@ -30,7 +30,7 @@
 
                 <view style="padding: 8rpx">{{attendees_number}} / {{max_attendees}} Attendees</view>
 
-                <progress percent="30"  color="#219EBC" active />
+                <progress percent="{{percentage}}"  color="#219EBC" active />
 
                 
         <!-- ***** Avatar -->
